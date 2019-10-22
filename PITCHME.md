@@ -457,7 +457,7 @@ Note:
 
 
 
-@snap[south-west span-50 ]
+@snap[south-west span-95 fragment ]
 <ul style="line-height:0.8;">
   <li><span style="font-size:0.7em" >What goes into the Simplest “C”</span></li>
   <li><span style="font-size:0.7em" >Start with what should go into the Simplest .INF file</span></li>
@@ -489,7 +489,7 @@ UefiMain ( <br>
 <p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><br><br>
 [Defines] <br>
   INF_VERSION    &nbsp;&nbsp;&nbsp;=  <br>
-  BASE_NAME    &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;=  <br>
+  BASE_NAME    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=  <br>
   FILE_GUID     &nbsp;&nbsp;&nbsp;&nbsp; =  <br>
   MODULE_TYPE    &nbsp;&nbsp;&nbsp;=  <br>
   VERSION_STRING&nbsp;=  <br>
