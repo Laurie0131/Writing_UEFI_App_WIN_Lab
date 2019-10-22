@@ -444,8 +444,8 @@ Note:
 <br>
 <br>
 <br>
-<span style="font-size:0.9em" ><font color="cyan">“C” file</font></span>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+<p style="line-height:45%" align="left" ><span style="font-size:0.9em" ><font color="cyan">“C” file</font></span></p>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-east span-48]
@@ -453,8 +453,8 @@ Note:
 <br>
 <br>
 <br>
-<span style="font-size:0.9em" ><font color="yellow">.inf file</font></span>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+<p style="line-height:45%" align="left" ><span style="font-size:0.9em" ><font color="yellow">&nbsp;&nbsp;.inf file</font></span></p>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -472,7 +472,7 @@ Note:
 <br>
 <br>
 <br>
-<p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" ><br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><br>
 EFI_STATUS <br>
 EFIAPI <br>
 UefiMain ( <br>
@@ -490,14 +490,14 @@ UefiMain ( <br>
 <br>
 <br>
 <br>
-<p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" ><br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><br>
 [Defines] <br>
-  INF_VERSION    =  <br>
-  BASE_NAME      =  <br>
-  FILE_GUID      =  <br>
-  MODULE_TYPE    =  <br>
-  VERSION_STRING =  <br>
-  ENTRY_POINT    =  <br>
+  INF_VERSION    &nbsp;&nbsp;=  <br>
+  BASE_NAME      &nbsp;&nbsp;&nbsp;=  <br>
+  FILE_GUID     &nbsp;&nbsp;&nbsp; =  <br>
+  MODULE_TYPE    &nbsp;&nbsp;&nbsp;=  <br>
+  VERSION_STRING=  <br>
+  ENTRY_POINT   &nbsp;&nbsp; =  <br>
   <br>
 [Sources] <br>
   <br>
