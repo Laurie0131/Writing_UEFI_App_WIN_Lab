@@ -991,7 +991,6 @@ Note:
 <br>
 <br>
 <br>
-<br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" ><br>&nbsp;</span></p>)
 @snapend
 
@@ -1003,7 +1002,7 @@ Note:
 <b>Change</b><br>
 <font face="Consolas">DEFINE ADD_SHELL_STRING = @color[yellow](TRUE)</font> <br>
 @size[.8em](&lpar;Save the file&rpar;)<br>
-@size[.8em](Delete directory <font face="Consolas">Build\ . . .\ Shellpkg)</font> <br>
+@size[.8em](Delete directory:&nbsp;&nbsp; <font face="Consolas">Build/ . . ./ Shellpkg)</font> <br>
 
 Re-Build – Cd to <font face="Consolas">/FW/edk2-ws/edk2<br>&nbsp;&nbsp;
 
