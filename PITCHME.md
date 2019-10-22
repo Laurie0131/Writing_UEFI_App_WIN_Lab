@@ -525,8 +525,10 @@ Copy the <font face="Consolas">LabSampleCode/SampleApp directory to C:/FW/edk2-w
 </span></p>
 <ul style="line-height:0.8;">
   <li><span style="font-size:0.7em" > Look in the INF for “XXXXXXXXXXX” sections that will need information  </span></li>
-  <li><span style="font-size:0.7em" > Create Name & <font face="Consolas">GUID</font>, and then fill in the <font face="Consolas">MODULE_TYPE</font> </span></li>
+  <li><span style="font-size:0.7em" > Create <font face="Consolas">Name & GUID</font>, and then fill in the <font face="Consolas">MODULE_TYPE</font> </span></li>
 </ul>  
+<br>
+<br>
 @snapend
 
 
