@@ -211,7 +211,7 @@ Note:
 ---?image=/assets/images/slides/Slide7.JPG
 @title[EDK II HelloWorld  App  Lab ]
 <p align="right"><span class="gold" ><b>EDK II HelloWorld  App  Lab  </b></span></p>
-<span style="font-size:0.8em" >First Setup for Building EDK II for Nt32, See <a href="https://gitpitch.com/tianocore-training/Platform_Build_Win_Lab/master#/2">Lab Setup for NT32 </a></span>
+<span style="font-size:0.8em" >First Setup for Building EDK II for EmulatorPkg, See <a href="https://gitpitch.com/tianocore-training/Platform_Build_Win_Emulator_Lab/master#/9">Lab Setup for EmulatorPkg </a></span>
 <p style="line-height:60%"><span style="font-size:0.8em" >Locate and Open </span><span style="font-size:0.6em" ><br>
 `MdeModulePkg/Application/HelloWorld/HelloWorld.c`</span></p>
 <div class="left1">
@@ -219,7 +219,7 @@ Note:
 <br>
 <br>
 <br>
-<span style="font-size:0.8em" >Build Nt32 Emulation </span><br>
+<span style="font-size:0.8em" >Build EmulatorPkg Emulation </span><br>
 <p style="line-height:70%"><span style="font-size:0.8em" >Then Run HelloWorld at the Shell command interface</span></p>
 </div>
 <div class="right1">
@@ -243,12 +243,14 @@ Note:
 <p align="right"><span class="gold" ><b>EDK II HelloWorld  App  Lab  </b></span></p>
 <span style="font-size:0.8em" >Open a VS  Command Prompt and type: `cd C:\FW\edk2` then </span>
 ```shell
-  C:/FW/edk2> edksetup
+ C:/FW/edk2-ws> Setenv.bat
+ C:/FW/edk2-ws> cd edk2
+ C:/FW/edk2-ws/ed2> edksetup
 ```
-<span style="font-size:0.8em" >Build the Nt32 Emulation</span>
+<span style="font-size:0.8em" >Build the EmulatorPkg Emulation</span>
 ```shell
-  C:/FW/edk2> Build –D BUILD_NEW_SHELL
-  C:/FW/edk2> Build Run
+  C:/FW/edk2-ws/edk2> Build –D ADD_SHELL_STRING 
+  C:/FW/edk2-ws/edk2> RunEmulator.bat
 ```
 <span style="font-size:0.8em" >At the UEFI Shell prompt</span>
 ```shell
@@ -257,8 +259,9 @@ UEFI Hello World!
 Shell> 
 ```
 
-<span style="font-size:0.9em" ><font color="cyan">How can we force the HelloWorld application to print out 3 times ?</font></span>
-
+<span style="font-size:0.79em" ><font color="cyan">How can we force the HelloWorld application to print out 3 times ?</font></span>
+<br>
+<span style="font-size:0.55em" >Note: RunEmulator.bat will run WinHost.exe from Build/EmulatorX64/DEBUG_<i>TAG</i>/X64 </span>
 
 Note:
 
@@ -329,18 +332,18 @@ Note:
 -  `gEfiMdeModulePkgTokenSpaceGuid.PcdHelloWorldPrintString|L"UEFI Hello World!\n"|VOID*|0x40000004`
 
 
-1. Edit the file Nt32Pkg/Nt32Pkg.dsc
+1. Edit the file EmulatorPkg/EmulatorPkg.dsc
   - After the section [PcdsFixedAtBuild], add the new line :  
   - `[PcdsFixedAtBuild]`
   - `gEfiMdeModulePkgTokenSpaceGuid.PcdHelloWorldPrintTimes|3`
 
 2. Re-Build – Cd to FW/edk2 dir 
-  - `bash$ build -D BUILD_NEW_SHELL`
-  - BUILD Run
+  - `bash$ build -D ADD_SHELL_STRING`
+  - RunEmulator.bat
 
 
 
----?image=/assets/images/slides/Slide12.JPG
+---
 @title[EDK II HelloWorld  App  Lab solution 02]
 <p align="right"><span class="gold" ><b>EDK II HelloWorld  App  Solution </b></span></p>
 
@@ -357,7 +360,7 @@ Note:
 5. Exit with Reset at the shell
 
 - How can we change the string of the HelloWorld application?
-- Also see  ~src/edk2/MdeModulePkg/MdeModulePkg.Dec
+- Also see  .../edk2/MdeModulePkg/MdeModulePkg.Dec
 
 
 
@@ -449,13 +452,47 @@ Note:
 @title[Lab 2: Sample Application INF file]
 <p align="right"><span class="gold" ><b>Lab 2: Sample Application INF file</b></span></p>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
+```
+[Defines]
+  INF_VERSION      =  0x00010005
+  BASE_NAME        =  XXXXXXXXXXXXXXXXXX        
+  FILE_GUID        =  XXXXXXXXXXXXXXXXXX       
+  MODULE_TYPE      =  XXXXXXXXXXXXXXXXXX
+  VERSION_STRING   =  1.0
+  ENTRY_POINT      =  UefiMain
+
+[Sources]
+  XXXXXXXXX
+[Packages]
+  #XXXXXXXX
+  
+[LibraryClasses]
+  #XXXXXXXXXXXXX
+    
+[Guids]
+ # . . .
+
+```
+
 <br>
 <p align="right"><span style="font-size:0.5em">Get a GUID: <a href="http://www.guidgenerator.com/">guidgerator.com</a></span></p>
+
+@snap[north-east span-39 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" ><br>
+@color[#A8ff60](&larr;) &nbsp;SampleApp
+@color[#A8ff60](&larr;) &nbsp;Get a GUID <a href="http://www.guidgenerator.com/">guidgerator.com</a>
+@color[#A8ff60](&larr;) &nbsp;UEFI_APPLICATION
+<br>
+<br>
+<br>
+@color[#A8ff60](&larr;) &nbsp;SampleApp.c
+<br><br>&nbsp;
+</span></p>
+@snapend
+
+
 
 Note:
 
@@ -471,6 +508,34 @@ Note:
 ---?image=/assets/images/slides/Slide17.JPG
 @title[Lab 2: Sample Application C file]
 <p align="right"><span class="gold" ><b>Lab 2: Sample Application ‘C’ file</b></span></p>
+
+```c++
+/** @file
+  This is a simple shell application
+**/
+ EFI_STATUS
+ EFIAPI
+ UefiMain (
+   IN EFI_HANDLE        ImageHandle,
+   IN EFI_SYSTEM_TABLE  *SystemTable
+   )
+ {
+   return EFI_SUCCESS;
+ }
+```
+
+@snap[south-east span-45 ]
+<span style="font-size:01.02em">@color[#A8ff60](&larr;) </span>
+<br>
+@snapend
+
+@snap[south-east span-39 ]
+@box[bg-navy text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.79em;" >@color[yellow](Does not do anything but return Success)<br>&nbsp;</span></p>)
+<br>
+<br>
+
+@snapend
+
 
 Note:
 
@@ -513,7 +578,7 @@ Note:
 @title[Lab 2: Application Lab – Update Files]
 <p align="right"><span class="gold" ><b>Lab 2: Application Lab – Update Files</b></span></p>
 <ul style="list-style-type:none">
- <li><span style="font-size:0.8em" >1.&nbsp;&nbsp; <font color="yellow">`.DSC` </font> (Nt32Pkg/Nt32Pkg.dsc)</span>  </li>
+ <li><span style="font-size:0.8em" >1.&nbsp;&nbsp; <font color="yellow">`.DSC` </font> (EmulatorPkg/EmulatorPkg.dsc)</span>  </li>
   <ul style="list-style-type:none" style="line-height:0.7;">
      <li><span style="font-size:0.7em" >`[Components . . .]`</span>  </li>
      <li><span style="font-size:0.7em" >&nbsp;&nbsp;Add INF to components section, before build options </span>  </li>
@@ -550,11 +615,23 @@ Note:
 Note:
 
 <pre>
- SampleApp/SampleApp.inf
- MdePkg/MdePkg.dec
- UefiApplicationEntryPoint
- `#include <Uefi.h>`
- `#include <Library/UefiApplicationEntryPoint.h>`
+EmulatorPkg/EmulatorPkg.dsc in the components section of the file towards the bottom
+SampleApp/SampleApp.inf 
+
+
+SampleApp/SampleApp.inf
+
+[Packages] 
+MdePkg/MdePkg.dec 
+[LibraryClasses] 
+UefiApplicationEntryPoint 
+
+
+SampleApp/SampleApp.c - near the top of the file
+#include <Uefi.h> 
+#include <Library/UefiApplicationEntryPoint.h>
+
+
 </pre>
 
 
@@ -566,8 +643,8 @@ Note:
 <p style="line-height:90%"><span style="font-size:0.8em" >Yes, At the VS Command Prompt</span></p>
 
 ```shell
-  C:/FW/edk2> Build -D BUILD_NEW_SHELL
-  C:/FW/edk2> Build Run
+  C:/FW/edk2-ws/edk2> Build -D ADD_SHELL_STRING
+  C:/FW/edk2-ws/edk2> RunEmulator.bat
 ```
 <span style="font-size:0.8em" >Run the application from the shell</span>
 ```shell
@@ -597,6 +674,15 @@ Note:
 ---?image=/assets/images/slides/Slide22.JPG
 @title[Possible Build Errors ]
 <p align="right"><span class="gold" ><b>Possible Build Errors</b></span></p>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Error on SampleApp.inf
+
+<br><br><br>&nbsp;
+<br><br><br>&nbsp;
+<br><br><br>&nbsp;
+The FILE_GUID was invalid or not updated from “XXX…” to a proper formatted GUID
+
+</span></p>
 
 Note:
 The `FILE_GUID` was invalid or not updated from “`XXX…`” to a proper formatted GUID
@@ -610,6 +696,16 @@ The `FILE_GUID` was invalid or not updated from “`XXX…`” to a proper forma
 @title[Possible Build Errors 02 ]
 <p align="right"><span class="gold" ><b>Possible Build Errors</b></span></p>
 
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Error on SampleApp.inf
+
+<br><br><br>&nbsp;
+<br><br><br>&nbsp;
+<br><br><br>&nbsp;
+The `[Packages]` was invalid  or did not specify MdePkg/MdePkg.dec properly
+
+</span></p>
+
 Note:
 The `[Packages]` was invalid  or did not specify MdePkg/MdePkg.dec properly
 
@@ -618,6 +714,15 @@ The `[Packages]` was invalid  or did not specify MdePkg/MdePkg.dec properly
 ---?image=/assets/images/slides/Slide24.JPG
 @title[Possible Build Errors 03]
 <p align="right"><span class="gold" ><b>Possible Build Errors</b></span></p>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Compiler Error on SampleApp.c
+
+<br><br><br>&nbsp;
+<br><br><br>&nbsp;
+<br><br><br>&nbsp;
+The `#include &lt;Library/UefiApplicationEntryPoint.h&gt;`  has a typo (“Application” not “Applications”)
+
+</span></p>
 
 Note:
 - The `#include <Library/UefiApplicationEntryPoint.h>`  has a typo (“Application” not “Applications”)
@@ -627,6 +732,17 @@ Note:
 ---?image=/assets/images/slides/Slide25.JPG
 @title[Possible Build Errors 04 ]
 <p align="right"><span class="gold" ><b>Possible Build Errors</b></span></p>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Compile Linker Error on unresolved reference
+
+
+<br><br><br>&nbsp;
+<br><br><br>&nbsp;
+<br><br><br>&nbsp;
+The SampleApp.inf section `[LibraryClasses]` did not reference `UefiApplicationEntryPoint`
+
+</span></p>
+
 
 Note:
 The SampleApp.inf section `[LibraryClasses]` did not reference `UefiApplicationEntryPoint`
@@ -636,6 +752,15 @@ The SampleApp.inf section `[LibraryClasses]` did not reference `UefiApplicationE
 ---?image=/assets/images/slides/Slide26.JPG
 @title[Possible Build Errors 05]
 <p align="right"><span class="gold" ><b>Possible Build Errors</b></span></p>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Error at the Shell prompt
+
+
+<br><br><br>&nbsp;
+<br><br><br>&nbsp;
+<br><br><br>&nbsp;
+Ensure the SampleApp.inf BaseName is SampleApp 
+</span></p>
 
 Note:
 Ensure the SampleApp.inf BaseName is SampleApp 
@@ -647,7 +772,7 @@ Ensure the SampleApp.inf BaseName is SampleApp
 <p align="Left"><span class="gold" >Lab 2.1: Build Switches</span></p>
 <br>
 <div class="left1">
-<span style="font-size:0.8em" >In this lab, you’ll change the build switch `BUILD_NEW_SHELL` to be always `TRUE`</span>
+<span style="font-size:0.8em" >In this lab, you’ll change the build switch `ADD_SHELL_STRING` to be always `TRUE`</span>
 </div>
 <div class="right1">
 <span style="font-size:0.8em" >&nbsp;  </span>
@@ -656,22 +781,44 @@ Ensure the SampleApp.inf BaseName is SampleApp
 Note:
 
 ---?image=/assets/images/slides/Slide28.JPG
+@title[Lab 2.1: Build MACRO Switches  ]
+<p align="right"><span class="gold" ><b>Build MACRO Switches </b></span></p>
+
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+The build for EmulatorPkg is using build MACRO Switch:<br>
+@color[yellow](-D ADD_SHELL_STRING) – used to change a string in the UEFI Shell application, only used for EDK II Training (requires ShellPkg be re-built on a change of this switch)
+</span></p>
+<p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" ><font color="black"><br>
+&nbsp; &num; For UEFI / EDK II Training <br>
+&nbsp; &num; This flag is to enable a different ver string for building of the ShellPkg<br>
+&nbsp; &num; These can be changed on the command line.<br>
+&nbsp;   DEFINE ADD_SHELL_STRING      = FALSE 
+</font></span></p>
+
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+First delete directory   Build/EmulatorX64/DEBUG_tag/X64/ShellPkg
+<br><br><br>&nbsp;
+</span></p>
+
+
+
+---?image=/assets/images/slides/Slide29.JPG
 @title[Lab 2.1: Compiling w/out Build Switch ]
 <p align="right"><span class="gold" ><b>Lab 2.1: Compiling w/out Build Switch</b></span></p>
 <span style="font-size:0.8em" >At the VS Command Prompt, Build <font color="yellow">without</font> the `-D` Switch</span>
 <div class="left1">
 <pre>
 ```
-  C:/FW/edk2> Build
-  C:/FW/edk2> Build Run
+  C:/FW/edk2-ws/edk2> Build
+  C:/FW/edk2-ws/edk2> RunEmulator.bat
 ```
 </pre>
 <p style="line-height:80%"><span style="font-size:0.8em" >Check the Shell Version with the “`Ver`” command</span></p>
-<p style="line-height:80%"><span style="font-size:0.8em" >Build with the `-D BUILD_NEW_SHELL` switch</span></p>
+<p style="line-height:80%"><span style="font-size:0.8em" >Build with the `-D ADD_SHELL_STRING` switch</span></p>
 <pre>
 ```
-  C:/FW/edk2> Build -D BUILD_NEW_SHELL
-  C:/FW/edk2> Build Run
+  C:/FW/edk2-ws/edk2> Build -D ADD_SHELL_STRING
+  C:/FW/edk2-ws/edk2> RunEmulator.bat
 ```
 </pre>
 <p style="line-height:80%"><span style="font-size:0.8em" >Check the Shell Version with the “`Ver`” command</span></p>
@@ -683,11 +830,11 @@ Note:
 Note:
 
 
----?image=/assets/images/slides/Slide29.JPG
+---?image=/assets/images/slides/Slide30.JPG
 @title[Lab 2.1: Compiling w/out Build Switch 02]
 <p align="right"><span class="gold" ><b>Lab 2.1: Compiling w/out Build Switch</b></span></p>
-<p style="line-height:80%"><span style="font-size:0.8em" >Edit the file `C:/FW/edk2/Nt32Pkg/Nt32Pkg.dsc`<br>
-Change the `DEFINE BUILD_NEW_SHELL = FALSE` to `TRUE` </span></p>
+<p style="line-height:80%"><span style="font-size:0.8em" >Edit the file `C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc`<br>
+Change the `DEFINE ADD_SHELL_STRING = FALSE` to `TRUE` </span></p>
 <br>
 <br>
 <br>
@@ -696,8 +843,8 @@ Change the `DEFINE BUILD_NEW_SHELL = FALSE` to `TRUE` </span></p>
 <span style="font-size:0.8em" >Re-build - CD to `C:\FW\edk2`</span>
 <pre>
 ```
-   C:/FW/edk2> Build
-   C:/FW/edk2> Build Run
+   C:/FW/edk2-ws/edk2> Build
+   C:/FW/edk2-ws/edk2> RunEmulator.bat
 ```
 </pre>
 <p style="line-height:80%"><span style="font-size:0.8em" >Check the Shell Version with the “`Ver`” command </span></p>
@@ -708,7 +855,20 @@ Change the `DEFINE BUILD_NEW_SHELL = FALSE` to `TRUE` </span></p>
 
 Note:
 
+---
+@title[Lab 2: What we learned from LAB 2]
+<p align="right"><span class="gold" ><b>What we learned from LAB 2</b></span></p>
+<ul style="list-style-type:none; line-height:0.7;">
+ <li><span style="font-size:0.7em">1. How to write a simple native UEFI Application </span></li>
+ <li><span style="font-size:0.7em">2. Each module requires a .inf file with a unique GUID (use http://www.guidgenerator.com/ )  </span></li>
+ <li><span style="font-size:0.7em">3. The module created will be the base name defined in the .inf file </span></li>
+ <li><span style="font-size:0.7em">4. The module’s .inf  file is required to be included in the platform .dsc file </span></li>
+ <li><span style="font-size:0.7em">5. The [Packages] section is required at minimum to include MdePkg/dePkg.dec </span></li>
+ <li><span style="font-size:0.7em">6. When using a Build Switch (-D) on the command line it overrides the value in the .DSC file </span></li>
+ <li><span style="font-size:0.7em">7. If it is a Library is getting updated, it is required to Build clean or delete the previous built module(s) including the library depending on what is getting re-built. </span></li>
+</ul>
 
+Note:
 
 ---
 @title[Lab 2: If there are Build Errors ]
@@ -717,8 +877,8 @@ Note:
 <span style="font-size:0.9em" >See class files for the solution </span>
 <ul>
   <li><span style="font-size:0.8em" >. . .FW/LabSampleCode/LabSolutions/LessonB.2 </span>  </li>
-  <li><span style="font-size:0.8em" >Copy the .inf and .c files to  C:/FW/edk2/SampleApp </span>  </li>
-  <li><span style="font-size:0.8em" >Search sample DSC for reference to SampleApp.inf and add this line to your workspace DSC file<br>&nbsp;&nbsp;&nbsp;&nbsp; `C:/FW/edk2/Nt32Pkg/Nt32Pkg.dsc` </span>  </li>
+  <li><span style="font-size:0.8em" >Copy the .inf and .c files to  C:/FW/edk2-ws/edk2/SampleApp </span>  </li>
+  <li><span style="font-size:0.8em" >Search sample DSC for reference to SampleApp.inf and add this line to your workspace DSC file<br>&nbsp;&nbsp;&nbsp;&nbsp; `C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc` </span>  </li>
 </ul>
 <br>
 <br>
@@ -762,7 +922,7 @@ Note:
 
 
 
----?image=/assets/images/slides/Slide33.JPG
+---?image=/assets/images/slides/Slide35.JPG
 @title[Lab 3 : Add System Table Code]
 <p align="right"><span class="gold" ><b>Lab 3 : Add System Table Code</b></span></p>
 
@@ -772,10 +932,11 @@ Note:
  - so for this example we are going to have our sample application print out the system table pointer
 - So how do we do that. Well remember to find a function we want we can use the help documentation or CHM file.so what we will find if we do this is that the print function is part of the UefiLib. So in order to add the print functionality we would need to add the UefiLib  to our list of library classes in our INF file
 - To see this example look in the files in our sample lab code SA3.c and SA3.inf.
-- So also as an exercise you can look at the file in the sample lab code Min.dsc, this is a platform description file without a platform or any packages that go with it,  and this demonstrates the minimal contents for a DSC file that can build this application. So it will build a single application orientated toward the one we just created except nothing else. So unlike the NT32 platform description file, if you were to look at it, There are huge amounts of other components, library classes, and all of that, this Min.dsc only does the minimum requirements.
+- So also as an exercise you can look at the file in the sample lab code Min.dsc, this is a platform description file without a platform or any packages that go with it,  and this demonstrates the minimal contents for a DSC file that can build this application. 
+So it will build a single application orientated toward the one we just created except nothing else. So unlike the EmulatorPkg platform description file, if you were to look at it, There are huge amounts of other components, library classes, and all of that, this Min.dsc only does the minimum requirements.
 
 
----?image=/assets/images/slides/Slide34.JPG
+---?image=/assets/images/slides/Slide36.JPG
 @title[Locating the “Print” Function ]
 <p align="right"><span class="gold" ><b>Lab 3 : Locating the `Print()` Function </b></span></p>
 
@@ -789,7 +950,7 @@ Note:
 - bash$ sudo aptitude install kchmviewer
 
 
----?image=/assets/images/slides/Slide35.JPG
+---?image=/assets/images/slides/Slide37.JPG
 @title[Modifying .C & .INF Files ]
 <p align="right"><span class="gold" ><b>Lab 3 : Modifying .C & .INF Files</b></span></p>
 
@@ -820,53 +981,17 @@ UefiMain (
 
 </pre>
  
-+++
-@title[Modifying .C & .INF Files 02 ]
-<p align="right"><span class="gold" ><b>Lab 3 : Modifying .C & .INF Files</b></span></p>
 
-- <span style="font-size:0.8em" >SampleApp.c</span>
 
-```C++
-#include <Uefi.h>
-#include <Library/UefiApplicationEntryPoint.h>
-// Lab 3
-#include <Library/UefiLib.h>
-
-EFI_STATUS
-EFIAPI
-UefiMain (
-  IN EFI_HANDLE        ImageHandle,
-  IN EFI_SYSTEM_TABLE  *SystemTable
-  )
-{
-// Lab 3
-  Print(L"System Table: 0x%08x\n", SystemTable); //
-  return EFI_SUCCESS;
-}
-```
-
-- <span style="font-size:0.8em" > SampleApp.inf</span>
-
-```Shell
- [LibraryClasses]
-  UefiApplicationEntryPoint
-# Lab 3
-  UefiLib
-```
-
-Note:
- 
- - c code and inf file
-
----?image=/assets/images/slides/Slide37.JPG
+---
 @title[Build and Test SampleApp]
 <p align="right"><span class="gold" ><b>Lab 3 : Build and Test SampleApp</b></span></p>
 <span style="font-size:0.8em" >At the VS Command Prompt </span>
-<div class="left1">
+
 <pre>
 ```
-  C:/FW/edk2> Build
-  C:/FW/edk2> Build Run
+  C:/FW/edk2-ws/edk2> Build
+  C:/FW/edk2-ws/edk2> RunEmulator.bat
 ```
 </pre>
 <span style="font-size:0.8em" >Run the application from the shell</span>
@@ -884,10 +1009,7 @@ Note:
  Shell> Reset
 ```
 </pre>
-</div>
-<div class="right1">
-<span style="font-size:0.8em" >&nbsp;  </span>
-</div>
+
 
 Note:
 
@@ -911,7 +1033,7 @@ End of LAB 3
 Note:
 
 
----?image=/assets/images/slides/Slide39.JPG
+---?image=/assets/images/slides/Slide40.JPG
 @title[Lab 4 : Add Wait for Event ]
 <p align="right"><span class="gold" ><b>Lab 4 : Add Wait for Event</b></span></p>
 <br>
@@ -970,7 +1092,7 @@ Note:
 
 
 
----?image=/assets/images/slides/Slide41.JPG
+---?image=/assets/images/slides/Slide42.JPG
 @title[Lab 4 :Update the C File for WaitForKey ]
 <p align="right"><span class="gold" ><b>Lab 4 : Update the C File for `WaitForKey`</b></span></p>
 <br>
@@ -981,11 +1103,8 @@ Note:
 
 Next sub slide to copy paste from
 
-+++
-@title[Lab 4 :Update the C File for WaitForKey 02 ]
-<p align="right"><span class="gold" ><b>Lab 4 : Update the C File for WaitForKey</b></span></p>
-<br>
-<span style="font-size:0.8em" >Add the following "Lab 4" statements to SampleApp.c</span>
+Add the following "Lab 4" statements to SampleApp.c
+
 ```c
 EFI_STATUS
 EFIAPI
@@ -1010,7 +1129,7 @@ UefiMain (
 ---?image=/assets/images/slides/Slide43.JPG
 @title[Lab 4 :Test Compile ]
 <p align="right"><span class="gold" ><b>Lab 4 :Test Compile</b></span></p>
-<br>
+
 
 
 
@@ -1028,17 +1147,37 @@ Note:
 ---?image=/assets/images/slides/Slide44.JPG
 @title[Lab 4 : Update SampleApp.c for gBS & gST ]
 <p align="right"><span class="gold" ><b>Lab 4 : Update for `gBS` & `gST`</b></span></p>
-<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" ><font color="black">
+&num;include &lt;Uefi.h&gt; <br>
+&num;include &lt;Library/UefiApplicationEntryPoint.h&gt; <br>
+&num;include &lt;Library/UefiLib.h&gt; <br>
+@color[red](&num;include &lt;Library/UefiBootServicesTableLib.h&gt;) &nbsp;&nbsp;&nbsp;@color[cyan](@size[1.4em](&larr;)) <br>
+// . . . <br>
+EFI_STATUS <br>
+EFIAPI <br>
+UefiMain ( <br>
+  IN EFI_HANDLE        ImageHandle, <br>
+  IN EFI_SYSTEM_TABLE  *SystemTable <br>
+  ) <br>
+{  <br>
+  @color[red](UINTN                EventIndex;) <br>
+  Print(L"System Table: 0x%p\n“, SystemTable);  <br>
+  @color[red](Print(L"\nPress any Key to  continue :\n"); )<br>
+  @color[red](gBS-&gt;WaitForEvent (1, &amp;gST-&gt;ConIn-&gt;WaitForKey, &amp;EventIndex); )<br>
+  return EFI_SUCCESS;  <br>
+} <br>
+<br><br><br>&nbsp;
+</font>
+</span></p>
+
 
 Note:
 
 - add:
 - `#include <Library/UefiBootServicesTableLib.h>`
 
-+++
-@title[Lab 4 : Update SampleApp.c for gBS & gST 02]
-<p align="right"><span class="gold" ><b>Lab 4 : Update for `gBS` & `gST`</b></span></p>
-<span style="font-size:0.8em" >SampleApp.c Should have the following for Lab 4: </span>
+
+SampleApp.c Should have the following for Lab 4: 
 
 ```C++
 #include <Uefi.h>
@@ -1076,8 +1215,8 @@ Note:
 <p align="right"><span class="gold" ><b>Lab 4: Build and Test SampleApp</b></span></p>
 <span style="font-size:0.8em" >At the VS Command Prompt </span>
 ```shell
-  C:/FW/edk2> Build
-  C:/FW/edk2> Build Run
+  C:/FW/edk2-ws/edk2> Build
+  C:/FW/edk2-ws/edk2> RunEmulator.bat
 ```
 <span style="font-size:0.8em" >Run the application from the shell</span>
 ```shell
@@ -1116,7 +1255,7 @@ Same as slide
 Note:
 
  
----?image=/assets/images/slides/Slide48.JPG
+---?image=/assets/images/slides/Slide47.JPG
 @title[Lab 5 :Create a Simple Typewriter Function]
 <p align="right"><span class="gold" ><b>Lab 5 : Typewriter Function</b></span></p>
 <br>
@@ -1141,7 +1280,7 @@ Same as Slide
 
 
  
----?image=/assets/images/slides/Slide48.JPG
+---?image=/assets/images/slides/Slide47.JPG
 @title[Lab 5 :Create a Simple Typewriter Function How]
 <p align="right"><span class="gold" ><b>Lab 5 : Typewriter Function</b></span></p>
 <br>
@@ -1191,7 +1330,7 @@ same as slide
 
 
  
----?image=/assets/images/slides/Slide51.JPG
+---?image=/assets/images/slides/Slide50.JPG
 @title[Lab 5 :Typewriter Function Solution]
 <p align="right"><span class="gold" ><b>Lab 5 : Solution</b></span></p>
 <br>
@@ -1261,13 +1400,13 @@ Note:
 Same as slide
 
 
----?image=/assets/images/slides/Slide53.JPG
+---?image=/assets/images/slides/Slide52.JPG
 @title[Lab 5 :Build and Test SampleApp ]
 <p align="right"><span class="gold" ><b>Lab 5 :Build and Test SampleApp</b></span></p>
 <span style="font-size:0.8em" >At the VS Command Prompt</span>
 ```shell
-  C:/FW/edk2> Build
-  C:/FW/edk2> Build Run
+  C:/FW/edk2-ws/edk2> Build
+  C:/FW/edk2-ws/edk2> RunEmulator.bat
 ```
 
 <span style="font-size:0.8em" >Run the application from the shell</span>
@@ -1277,17 +1416,13 @@ Same as slide
 <br>
 <br>
 <br>
-<div class="left">
+
 <span style="font-size:0.8em" >Exit</span>
-<pre>
-```
+
+```shell
  Shell> Reset
 ```
-</pre>
-</div>
-<div class="right1">
-<span style="font-size:01.0em" ><font color="cyan"></font></span>
-</div>
+
 
 Note:
 
@@ -1307,8 +1442,8 @@ End of Lab 5
 <br>
 <span style="font-size:0.9em" > Build SampleApp</span>
 ```
-  C:/FW/edk2> Build
-  C:/FW/edk2> Build Run
+  C:/FW/edk2-ws/edk2> Build
+  C:/FW/edk2-ws/edk2> RunEmulator.bat
 ```
 <span style="font-size:0.9em" >Run the application from the shell </span>
 ```
@@ -1364,7 +1499,7 @@ Note:
 Note:
 
  
----?image=/assets/images/slides/Slide57.JPG
+---?image=/assets/images/slides/Slide56.JPG
 @title[Lab 6: With EDK II EADK]
 <p align="right"><span class="gold" ><b>Lab 6: With EDK II EADK</b></span></p>
 <br>
@@ -1375,20 +1510,20 @@ Note:
 - What libraries are needed 
 - What differences are there using the LibC
 
----?image=/assets/images/slides/Slide58.JPG
+---?image=/assets/images/slides/Slide57.JPG
 @title[Lab 6: EDK II using EADK]
 <p align="right"><span class="gold" ><b>Lab 6: EDK II using EADK</b></span></p>
 <br>
 
 Note:
 - Start with the packages for EADK 
-- /edk2  - AppPkg	- has directory Applications
-- /edk2 -  StdLib 	- contains the LibC libraries
+- /edk2-libc  - AppPkg	- has directory Applications
+- /edk2-libc -  StdLib 	- contains the LibC libraries
 
 
-- Copy and paste directory ~/FW/LabSampleCode/SampleCApp to C:/FW/edk2/AppPkg/Applications/SampleCApp 
+- Copy and paste directory ~/FW/LabSampleCode/SampleCApp to C:/FW/edk2-ws/edk2-libc/AppPkg/Applications/SampleCApp 
 
----?image=/assets/images/slides/Slide59.JPG
+---?image=/assets/images/slides/Slide58.JPG
 @title[Lab 6: EDK II using EADK 02]
 <p align="right"><span class="gold" ><b>Lab 6: EDK II using EADK</b></span></p>
 <br>
@@ -1481,15 +1616,15 @@ Note:
 <p align="right"><span class="gold" ><b>Lab 6 :Build and Test SampleCApp</b></span></p>
 <span style="font-size:0.8em" >Build AppPkg at the VS Command prompt</span>
 ```shell
-  C:/FW/edk2> build -p AppPkg\AppPkg.dsc –m AppPkg\Applications\SampleCApp\SampleCApp.inf
+  C:/FW/edk2-ws/edk2> build -p AppPkg\AppPkg.dsc –m AppPkg\Applications\SampleCApp\SampleCApp.inf
 ```
-<span style="font-size:0.8em" >Copy the built application to the Nt32 runtime directory</span>
+<span style="font-size:0.8em" >Copy the built application to the EmulatorPkg runtime directory</span>
 ```shell
-  C:/FW/edk2> copy Build\AppPkg\DEBUG_VS2013x86\IA32\SampleCApp.efi  Build\NT32IA32\DEBUG_VS2013x86\IA32
+  C:/FW/edk2-ws/edk2> copy Build\AppPkg\DEBUG_VS2015x86\X64\SampleCApp.efi  Build\EmulatorX64\DEBUG_VS2015x86\X64
 ```
-<span style="font-size:0.8em" >Run the Nt32 Emulation</span>
+<span style="font-size:0.8em" >Run the Emulation</span>
 ```shell
-  C:/FW/edk2> build run
+  C:/FW/edk2-ws/edk2> RunEmulator.bat
 ```
 <span style="font-size:0.8em" >Run the application SampleCapp from the shell</span>
 ```shell
@@ -1622,15 +1757,15 @@ Note:
 <p align="right"><span class="gold" ><b>Lab 7 :Build and Test SampleCApp</b></span></p>
 <span style="font-size:0.8em" >Build AppPkg at the VS Command prompt</span>
 ```shell
-  C:/FW/edk2> build -p AppPkg\AppPkg.dsc –m AppPkg\Applications\SampleCApp\SampleCApp.inf
+  C:/FW/edk2-ws/edk2> build -p AppPkg\AppPkg.dsc –m AppPkg\Applications\SampleCApp\SampleCApp.inf
 ```
-<span style="font-size:0.8em" >Copy the built application to the Nt32 runtime directory</span>
+<span style="font-size:0.8em" >Copy the built application to the EmulatorPkg runtime directory</span>
 ```shell
-  C:/FW/edk2> copy Build\AppPkg\DEBUG_VS2013x86\IA32\SampleCApp.efi  Build\NT32IA32\DEBUG_VS2013x86\IA32
+  C:/FW/edk2-ws/edk2> copy Build\AppPkg\DEBUG_VS2015x86\X64\SampleCApp.efi  Build\EmulatorX64\DEBUG_VS2015x86\X64
 ```
-<span style="font-size:0.8em" >Run the Nt32 Emulation</span>
+<span style="font-size:0.8em" >Run the Emulation</span>
 ```shell
-  C:/FW/edk2> build run
+  C:/FW/edk2-ws/edk2> RunEmulator.bat
 ```
 <span style="font-size:0.8em" >Run the application SampleCapp from the shell</span>
 ```shell
