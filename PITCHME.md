@@ -547,7 +547,7 @@ Note:
 
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black">
 <br><br>
-<br>
+<br><br>
 [Defines] <br>
   INF_VERSION &nbsp;&nbsp;     =  0x00010005<br>
   BASE_NAME   &nbsp;&nbsp;&nbsp;&nbsp;     =  XXXXXXXXXXXXXXX <br>
@@ -568,8 +568,6 @@ Note:
  &num; . . .<br>
 </font></span></p>
 
-
-<br>
 <p align="right"><span style="font-size:0.5em">Get a GUID: <a href="http://www.guidgenerator.com/">guidgerator.com</a></span></p>
 
 @snap[north-east span-45 ]
@@ -577,14 +575,14 @@ Note:
 <br>
 <br>
 <br>
-<p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" ><br>
-@color[#A8ff60](&larr;) &nbsp;SampleApp <br> 
-@color[#A8ff60](&larr;) &nbsp;Get a GUID <a href="http://www.guidgenerator.com/">guidgerator.com</a> <br> 
-@color[#A8ff60](&larr;) &nbsp;UEFI_APPLICATION <br> 
+<p style="line-height:40%" align="left" ><span style="font-size:0.51em; font-family:Consolas;" ><br>
+@color[red](&larr; ----) &nbsp;SampleApp <br> 
+@color[red](&larr; ----) &nbsp;Get a GUID <a href="http://www.guidgenerator.com/">guidgerator.com</a> <br> 
+@color[red](&larr; ----) &nbsp;UEFI_APPLICATION <br> 
 <br>
 <br>
 <br>
-@color[#A8ff60](&larr;) &nbsp;SampleApp.c
+@color[red](&larr; ----) &nbsp;SampleApp.c
 <br><br>&nbsp;
 </span></p>
 @snapend
