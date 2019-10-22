@@ -1622,7 +1622,69 @@ same as slide
 ---?image=/assets/images/slides/Slide50.JPG
 @title[Lab 5 :Typewriter Function Solution]
 <p align="right"><span class="gold" ><b>Lab 5 : Solution</b></span></p>
+
+@snap[north-west span-50 ]
 <br>
+<br>
+<p style="line-height:35%" align="left" ><span style="font-size:0.45em; font-family:Consolas;" ><font color="black">
+&num;include &lt;Uefi.h&gt; <br>
+&num;include &lt;Library/UefiApplicationEntryPoint.h&gt; <br>
+&num;include &lt;Library/UefiLib.h&gt; <br>
+&num;include &lt;Library/UefiBootServicesTableLib.h&gt; <br>
+// Lab 5 <br>
+&num;include &lt;Library/BaseMemoryLib.h&gt; <br>
+&num;define CHAR_DOT  0x002E    // '.' in Unicode <br>
+ <br>
+EFI_STATUS <br>
+EFIAPI <br>
+UefiMain ( <br>&nbsp;&nbsp;
+  IN EFI_HANDLE        ImageHandle, <br>&nbsp;&nbsp;
+  IN EFI_SYSTEM_TABLE  *SystemTable <br>&nbsp;&nbsp;
+  ) <br>
+{ <br>&nbsp;&nbsp;
+  UINTN &nbsp;&nbsp;&nbsp;&nbsp;         EventIndex; <br>
+// Lab 5 <br>&nbsp;&nbsp;
+  BOOLEAN        ExitLoop; <br>&nbsp;&nbsp;
+  EFI_INPUT_KEY  Key; <br>
+   <br>
+// Lab 3 <br>&nbsp;&nbsp;
+ Print(L"System Table: 0x%p \n",SystemTable);  <br>
+ <br>
+//Lab 4 <br>&nbsp;&nbsp;
+ Print( L"\nPress any Key to continue : \n\n"); <br>&nbsp;&nbsp;
+ gBS-&gt;WaitForEvent (1, &gST-&gt;ConIn-&gt;WaitForKey,    	&EventIndex); <br>
+<br><br><br>&nbsp;
+</font>
+</span></p>
+@snapend
+
+@snap[north-east span-45 ]
+<br>
+<br>
+<span style="font-size:0.45em;" >(hint: Lesson B.5 has the solution)<br>
+<p style="line-height:35%" align="left" ><span style="font-size:0.45em; font-family:Consolas;" ><font color="black">
+// Lab 5  <br>&nbsp;&nbsp;
+ Print(L"Enter text. Include a dot ('.') in a \<br>&nbsp;&nbsp;sentence then <Enter> to exit:\n "); //  <br>&nbsp;&nbsp;
+ ZeroMem (&Key, sizeof (EFI_INPUT_KEY));  <br>&nbsp;&nbsp;
+ gST-&gt;ConIn->ReadKeyStroke (gST-&gt;ConIn, &Key);  <br>&nbsp;&nbsp;
+ ExitLoop = FALSE;  <br>&nbsp;&nbsp;
+ do {    // Do loop until "DOT" and "enter"   <br>&nbsp;&nbsp;&nbsp;&nbsp;
+	 gBS-&gt;WaitForEvent (1, &gST-&gt;ConIn-&gt;WaitForKey,&EventIndex);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+	 gST-&gt;ConIn->ReadKeyStroke (gST-&gt;ConIn, &Key);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+	 Print(L"%c", Key.UnicodeChar);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+	 if (Key.UnicodeChar == CHAR_DOT){  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		ExitLoop = TRUE;  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	 }  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+    } while (!(Key.UnicodeChar == CHAR_LINEFEED  ||    <br>&nbsp;&nbsp;
+	    Key.UnicodeChar == CHAR_CARRIAGE_RETURN) ||   <br>&nbsp;&nbsp;
+       !(ExitLoop) );  <br>&nbsp;&nbsp;
+  <br>&nbsp;&nbsp;
+ Print(L"\n");  <br>&nbsp;&nbsp;
+ return EFI_SUCCESS;  <br>
+}
+</font>
+</span></p>
+@snapend
 
 Note:
 
@@ -1655,7 +1717,7 @@ UefiMain (
   EFI_INPUT_KEY  Key;
   
 // Lab 3
- Print(L"System Table: 0x%08x\n",SystemTable); 
+ Print(L"System Table: 0x%p \n",SystemTable); 
 
 //Lab 4
  Print( L"\nPress any Key to continue : \n\n");
