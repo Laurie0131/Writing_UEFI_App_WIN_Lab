@@ -627,7 +627,7 @@ Note:
 </span></p>
 
 
-@snap[south-east span-47 ]
+@snap[south-east span-45 ]
 <p style="line-height:45%" align="left" ><span style="font-size:02.02em">@color[#A8ff60](&larr;)<br> </span></p>
 <br><br><br><br>
 @snapend
