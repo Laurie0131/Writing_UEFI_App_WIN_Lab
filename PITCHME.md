@@ -1663,21 +1663,21 @@ UefiMain ( <br>&nbsp;&nbsp;
 <p style="line-height:31%"><span style="font-size:0.45em;" >(hint: Lesson B.5 has the solution)</span)</p>
 <br>
 <br>
-<p style="line-height:26%" align="left" ><span style="font-size:0.35em; font-family:Consolas;" ><font color="black">
-// Lab 5  <br>&nbsp;&nbsp;
+<p style="line-height:26%" align="left" ><span style="font-size:0.35em; font-family:Consolas;" ><font color="black"><br>
+<b>// Lab 5 </b> <br>&nbsp;&nbsp;
  Print(L"Enter text. Include a dot ('.') in a \<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sentence then <Enter> to exit:\n "); //  <br>&nbsp;&nbsp;
  ZeroMem (&Key, sizeof (EFI_INPUT_KEY));  <br>&nbsp;&nbsp;
  gST-&gt;ConIn->ReadKeyStroke (gST-&gt;ConIn, &Key);  <br>&nbsp;&nbsp;
  ExitLoop = FALSE;  <br>&nbsp;&nbsp;
  do {    // Do loop until "DOT" and "enter"   <br>&nbsp;&nbsp;&nbsp;&nbsp;
-	 gBS-&gt;WaitForEvent (1, &gST-&gt;ConIn-&gt;WaitForKey, &EventIndex);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+	 gBS-&gt;WaitForEvent (1, &gST-&gt;ConIn-&gt;WaitForKey, &nbsp;&nbsp;&nbsp;&nbsp;&EventIndex);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
 	 gST-&gt;ConIn->ReadKeyStroke (gST-&gt;ConIn, &Key);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
 	 Print(L"%c", Key.UnicodeChar);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
 	 if (Key.UnicodeChar == CHAR_DOT){  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		ExitLoop = TRUE;  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     	 }  <br>&nbsp;&nbsp;&nbsp;&nbsp;
-    } while (!(Key.UnicodeChar == CHAR_LINEFEED || <br>&nbsp;&nbsp;
-	    Key.UnicodeChar == CHAR_CARRIAGE_RETURN) ||   <br>&nbsp;&nbsp;
+    } while (!(Key.UnicodeChar == CHAR_LINEFEED || <br>&nbsp;&nbsp;&nbsp;&nbsp;
+	    Key.UnicodeChar == CHAR_CARRIAGE_RETURN) ||   <br>&nbsp;&nbsp;&nbsp;&nbsp;
        !(ExitLoop) );  <br>&nbsp;&nbsp;
   <br>&nbsp;&nbsp;
  Print(L"\n");  <br>&nbsp;&nbsp;
