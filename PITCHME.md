@@ -1886,6 +1886,19 @@ Note:
 ---?image=/assets/images/slides/Slide57.JPG
 @title[Lab 6: EDK II using EADK]
 <p align="right"><span class="gold" ><b>Lab 6: EDK II using EADK</b></span></p>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Start with the packages for EADK from edk2-libc<br>
+</span></p>
+<p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" >
+&bull; /edk2-libc - AppPkg	- <font face="Arial">has directory Applications</font><br>
+&bull; /edk2-libc - StdLib - <font face="Arial">contains the LibC libraries</font><br>
+<br>
+&bull; <font face="Arial">Copy and paste directory</font> ../FW/LabSampleCode/SampleCApp to 
+       C:/FW/edk2-ws/edk2-libc/AppPkg/Applications/SampleCApp 
+
+<br><br><br>&nbsp;
+</span></p>
+
 <br>
 
 Note:
