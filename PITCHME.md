@@ -907,7 +907,7 @@ Note:
 The build for EmulatorPkg is using build MACRO Switch:<br>
 @color[yellow](-D &nbsp;ADD_SHELL_STRING) – used to change a string in the UEFI Shell application, only used for EDK II Training (requires ShellPkg be re-built on a change of this switch)
 </span></p>
-<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black"><br><br><br><br>
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black"><br><br><br>
 &nbsp; &num; For UEFI / EDK II Training <br>
 &nbsp; &num; This flag is to enable a different ver string for building of the ShellPkg<br>
 &nbsp; &num; These can be changed on the command line.<br>
