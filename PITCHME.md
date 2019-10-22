@@ -443,13 +443,11 @@ Note:
 <br>
 <br>
 <br>
-<br>
 <p style="line-height:45%" align="left" ><span style="font-size:0.9em" ><font color="cyan">“C” file</font></span></p>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-east span-48]
-<br>
 <br>
 <br>
 <br>
@@ -471,8 +469,7 @@ Note:
 <br>
 <br>
 <br>
-<br>
-<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><br><br>
 EFI_STATUS <br>
 EFIAPI <br>
 UefiMain ( <br>
@@ -489,8 +486,7 @@ UefiMain ( <br>
 <br>
 <br>
 <br>
-<br>
-<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><br><br>
 [Defines] <br>
   INF_VERSION    &nbsp;&nbsp;=  <br>
   BASE_NAME      &nbsp;&nbsp;&nbsp;=  <br>
