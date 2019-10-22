@@ -607,23 +607,27 @@ Note:
 @title[Lab 2: Sample Application C file]
 <p align="right"><span class="gold" ><b>Lab 2: Sample Application ‘C’ file</b></span></p>
 
-```c++
-/** @file
-  This is a simple shell application
-**/
- EFI_STATUS
- EFIAPI
- UefiMain (
-   IN EFI_HANDLE        ImageHandle,
-   IN EFI_SYSTEM_TABLE  *SystemTable
-   )
- {
-   return EFI_SUCCESS;
- }
-```
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" >
+<br><br>
+<br><br><font color="#00b0f0"> 
+/** @file <br>
+  This is a simple shell application <br>
+**/ </font><br><font color="black">
+ EFI_STATUS <br>
+ EFIAPI <br>
+ UefiMain ( <br>
+   IN EFI_HANDLE        ImageHandle, <br>
+   IN EFI_SYSTEM_TABLE  *SystemTable <br>
+   ) <br>
+ { <br>
+   @color[red](return) EFI_SUCCESS; <br>
+ } <br>
+</font>
+</span></p>
+
 
 @snap[south-east span-45 ]
-<span style="font-size:01.02em">@color[#A8ff60](&larr;) </span>
+<p style="line-height:45%" align="left" ><span style="font-size:01.02em">@color[#A8ff60](&larr;) </span></p>
 <br>
 @snapend
 
