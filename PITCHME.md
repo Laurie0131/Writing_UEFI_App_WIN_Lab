@@ -1893,7 +1893,7 @@ Start with the packages for EADK from edk2-libc<br>
 &bull; /edk2-libc - AppPkg	- <font face="Arial">has directory Applications</font><br>
 &bull; /edk2-libc - StdLib - <font face="Arial">contains the LibC libraries</font><br>
 <br>
-&bull; <font face="Arial">Copy and paste directory</font> ../FW/LabSampleCode/SampleCApp to 
+&bull; <font face="Arial"><b>Copy</b> and <b>paste </b> directory</font> ../FW/LabSampleCode/SampleCApp to <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        C:/FW/edk2-ws/edk2-libc/AppPkg/Applications/SampleCApp 
 
 <br><br><br>&nbsp;
