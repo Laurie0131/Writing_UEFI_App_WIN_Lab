@@ -627,16 +627,16 @@ Note:
 </span></p>
 
 
-@snap[south-east span-55 ]
-<p style="line-height:45%" align="left" ><span style="font-size:02.02em">@color[#A8ff60](&larr;) </span></p>
-<br><br><br>
+@snap[south-east span-50 ]
+<p style="line-height:45%" align="left" ><span style="font-size:02.02em">@color[#A8ff60](&larr;)<br> </span></p>
+<br><br><br><br>
 @snapend
 
 @snap[south-east span-39 ]
 @box[bg-navy text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.79em;" >@color[yellow](Does not do anything but return Success)<br>&nbsp;</span></p>)
 <br>
 <br>
-
+<br>
 @snapend
 
 
