@@ -558,6 +558,7 @@ Note:
 <br>
 [Sources]<br>
   XXXXXXXXX<br>
+  <br>
 [Packages]<br>
   &num;XXXXXXXX<br>
   <br>
@@ -583,7 +584,7 @@ Note:
 <br>
 <br>
 <br>
-<br>
+
 @color[red](&larr; ------) &nbsp;SampleApp.c
 <br><br>&nbsp;
 </span></p>
