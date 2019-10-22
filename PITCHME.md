@@ -1652,7 +1652,7 @@ Note:
 Note:
 
  
----?image=/assets/images/slides/Slide64.JPG
+---?image=/assets/images/slides/Slide62.JPG
 <!-- .slide: data-transition="none" -->
 @title[Lab 7: With EDK II EADK]
 <p align="right"><span class="gold" ><b>Lab 7: Add the same functionally from Lab 5</b></span></p>
@@ -1660,7 +1660,7 @@ Note:
 
 Note:
 
-+++?image=/assets/images/slides/Slide65.JPG
++++?image=/assets/images/slides/Slide63.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Lab 7: With EDK II EADK 02]
@@ -1669,7 +1669,7 @@ Note:
 Note:
 
 
-+++?image=/assets/images/slides/Slide66.JPG
++++?image=/assets/images/slides/Slide64.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Lab 7: With EDK II EADK 03]
@@ -1678,7 +1678,7 @@ Note:
 Note:
 
 
-+++?image=/assets/images/slides/Slide67.JPG
++++?image=/assets/images/slides/Slide65.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Lab 7: With EDK II EADK 04]
