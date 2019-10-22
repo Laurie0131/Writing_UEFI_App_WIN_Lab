@@ -1376,14 +1376,14 @@ Add the following "Lab 4" statements to SampleApp.c
 However, this won’t compile . . . <font face="Consolas">gBS and gST </font> are not defined.
 </span></p>
 
-@snap[South-west span-100]
+@snap[south-west span-100]
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" >
 <font face="Arial">
 <b>Search</b> the </font>MdePkg.chm for “gBS” and “gST”<font face="Arial"> – they are located in</font> UefiBootServicesTableLib.h<br>
 <br>
 <font face="Arial">
 <b>Add</b> the boot services lib to</font> SampleApp.c . . .<br>
-@color[yellow](&num;include &lt;Library/UefiBootServicesTableLib.h&gr;) <br>
+@color[yellow](&num;include &lt;Library/UefiBootServicesTableLib.h&gt;) <br>
 <font face="Arial">@size[.8em](&lpar;hint: Lesson B4 has the solution&rpar;)</font>
 </span></p>
 @snapend
