@@ -1009,7 +1009,7 @@ Re-Build – Cd to <font face="Consolas">/FW/edk2-ws/edk2<br>&nbsp;&nbsp;
    @size[.7em](C:/FW/edk2-ws/edk2> Build)<br>&nbsp;&nbsp;
    @size[.7em](C:/FW/edk2-ws/edk2> RunEmulator.bat)<br><br>
 </font>
-<br><br>
+<br><br><br>
 Check the Shell version with “<font face="Consolas">Ver</font>”  command 
 </span></p>
 @snapend
