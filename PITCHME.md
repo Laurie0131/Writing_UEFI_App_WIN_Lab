@@ -552,7 +552,7 @@ Note:
   INF_VERSION &nbsp;&nbsp;     =  0x00010005<br>
   BASE_NAME   &nbsp;&nbsp;&nbsp;&nbsp;     =  XXXXXXXXXXXXXXX <br>
   FILE_GUID   &nbsp;&nbsp;&nbsp;&nbsp;     =  XXXXXXXXXXXXXXX <br>
-  MODULE_TYPE &nbsp;&nbsp;     =  XXXXXXXXXXXXXX <br>
+  MODULE_TYPE &nbsp;&nbsp;     =  XXXXXXXXXXXXXXX <br>
   VERSION_STRING =  1.0<br>
   ENTRY_POINT  &nbsp;&nbsp;    =  UefiMain<br>
 <br>
@@ -570,19 +570,21 @@ Note:
 
 <p align="right"><span style="font-size:0.5em">Get a GUID: <a href="http://www.guidgenerator.com/">guidgerator.com</a></span></p>
 
-@snap[north-east span-45 ]
+@snap[north-east span-49 ]
 <br>
 <br>
 <br>
 <br>
-<p style="line-height:40%" align="left" ><span style="font-size:0.51em; font-family:Consolas;" ><br>
-@color[red](&larr; ----) &nbsp;SampleApp <br> 
-@color[red](&larr; ----) &nbsp;Get a GUID <a href="http://www.guidgenerator.com/">guidgerator.com</a> <br> 
-@color[red](&larr; ----) &nbsp;UEFI_APPLICATION <br> 
+<p style="line-height:40%" align="left" ><span style="font-size:0.55em; font-family:Consolas;" ><br><br>
+@color[red](&larr; ------) &nbsp;SampleApp <br> 
+@color[red](&larr; ------) &nbsp;Get a GUID <a href="http://www.guidgenerator.com/">guidgerator.com</a> <br> 
+@color[red](&larr; ------) &nbsp;UEFI_APPLICATION <br> 
 <br>
 <br>
 <br>
-@color[red](&larr; ----) &nbsp;SampleApp.c
+<br>
+<br>
+@color[red](&larr; ------) &nbsp;SampleApp.c
 <br><br>&nbsp;
 </span></p>
 @snapend
