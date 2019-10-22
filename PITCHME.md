@@ -324,6 +324,9 @@ Source from Helloworld.c
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
 Edit the file <font face="Consolas">C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc</font><br>
 After the section <font face="Consolas">[PcdsFixedAtBuild] </font> (search for “<font face="Consolas">PcdsFixedAtBuild</font>” or “Hello”)
+<br>
+<br>
+<br>
 </span></p>
 
 <p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" ><font color="black">
@@ -332,7 +335,7 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdHelloWorldPrintTimes|3
 </font>
 </span></p>
 
-<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br><br>
 Re-Build – Cd to <font face="Consolas">C:/FW/edk2-ws/edk2</font>
 </span></p>
 
