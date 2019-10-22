@@ -1123,7 +1123,7 @@ So it will build a single application orientated toward the one we just created 
 <br>
 <ul style="list-style-type:none; line-height:0.7;">
   <li><span style="font-size:0.7em;" >  1. Search the <font face="Consolas">MdePkg.chm</font> and find that the Print function by clicking<br>&nbsp;&nbsp;&nbsp;&nbsp; on the "<u>I</u>ndex" tab</span></li>
-  <li><span style="font-size:0.7em;" >  2. Type “Print” and double click</span></li>
+  <li><span style="font-size:0.7em;" >  2. Type "Print" and double click</span></li>
   <li><span style="font-size:0.7em;" >  3. Scroll to the top in the right window to see that the print function is<br>&nbsp;&nbsp;&nbsp;&nbsp; in the <font face="Consolas">UefiLib.h</font> file</span></li>
 </ul>
 
@@ -1145,11 +1145,11 @@ Note:
 <br>
 <br>
 <br>
-<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black">
- SampleApp.c <br>
-&numb;include &lt;Uefi.h&gt; <br>
-&numb;include &lt;Library/UefiApplicationEntryPoint.h&gt; <br>
-@color[red](&numb;include &lt;Library/UefiLib.h&gt;) <br>
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black"><br>
+ SampleApp.c <br><br>
+&num;include &lt;Uefi.h&gt; <br>
+&num;include &lt;Library/UefiApplicationEntryPoint.h&gt; <br>
+@color[red](&num;include &lt;Library/UefiLib.h&gt;) <br>
  <br>
 EFI_STATUS <br>
 EFIAPI <br>
@@ -1171,8 +1171,8 @@ UefiMain ( <br>&nbsp;&nbsp;
 <br>
 <br>
 <br>
-<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black">
- SampleApp.inf <br>
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black"><br>
+ SampleApp.inf <br><br>
  [LibraryClasses] <br>&nbsp;&nbsp;
   UefiApplicationEntryPoint <br>&nbsp;&nbsp;
   @color[red](UefiLib)
