@@ -1120,11 +1120,11 @@ So it will build a single application orientated toward the one we just created 
 ---?image=/assets/images/slides/Slide36.JPG
 @title[Locating the “Print” Function ]
 <p align="right"><span class="gold" ><b>Lab 3 : Locating the <font face="Consolas">Print()</font> Function </b></span></p>
-
-1. Search the <font face="Consolas">MdePkg.chm</font> and find that the Print function by clicking on the “<u>I</u>ndex” tab
-2. Type “Print” and double click
-3. Scroll to the top in the right window to see that the print function is in the <font face="Consolas">UefiLib.h</font> file
-
+<ul style="list-style-type:none; line-height:0.7;">
+  <li><span style="font-size:0.7em;" >  1. Search the <font face="Consolas">MdePkg.chm</font> and find that the Print function by clicking on the “<u>I</u>ndex” tab</span></li>
+  <li><span style="font-size:0.7em;" >  2. Type “Print” and double click</span></li>
+  <li><span style="font-size:0.7em;" >  3. Scroll to the top in the right window to see that the print function is in the <font face="Consolas">UefiLib.h</font> file</span></li>
+</ul>
 
 Note:
 
