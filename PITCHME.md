@@ -1368,34 +1368,26 @@ Note:
 
 Add the following "Lab 4" statements to SampleApp.c
 
-<pre>
-```c
-EFI_STATUS<br>
-EFIAPI<br>
-UefiMain (<br>
-  IN EFI_HANDLE        ImageHandle,<br>
-  IN EFI_SYSTEM_TABLE  *SystemTable<br>
-  )<br>
-{<br>
-// Lab 4<br>
- UINTN                      EventIndex; <br>
-<br>
-// Lab 3<br>
- Print(L"System Table: 0x%08x",SystemTable); <br>
-<br>
- // Lab 4<br>
- Print(L"\nPress any Key to continue : \n");<br>
- gBS->WaitForEvent (1, &gST->ConIn->WaitForKey, &EventIndex);<br>
-
-```
-</pre>
  
 ---?image=/assets/images/slides/Slide43.JPG
 @title[Lab 4 :Test Compile ]
 <p align="right"><span class="gold" ><b>Lab 4 :Test Compile</b></span></p>
+<p style="line-height:65%" align="left" ><span style="font-size:0.7em;" >
+However, this won’t compile . . . <font face="Consolas">gBS and gST </font> are not defined.
+</span></p>
 
-
-
+@snap[South-west span-100]
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" >
+<font face="Arial">
+<b>Search</b> the </font>MdePkg.chm for “gBS” and “gST”<font face="Arial"> – they are located in</font> UefiBootServicesTableLib.h<br>
+<br>
+<font face="Arial">
+<b>Add</b> the boot services lib to</font> SampleApp.c . . .<br>
+@color[yellow](&num;include &lt;Library/UefiBootServicesTableLib.h&gr;) <br>
+<font face="Arial">@size[.8em](&lpar;hint: Lesson B4 has the solution&rpar;)</font>
+</span></p>
+@snapend
+ 
 
 Note:
 - However, this won’t compile … gBS and gST are not defined.
