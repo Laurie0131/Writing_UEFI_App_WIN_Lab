@@ -211,15 +211,15 @@ Note:
 ---?image=/assets/images/slides/Slide7.JPG
 @title[EDK II HelloWorld  App  Lab ]
 <p align="right"><span class="gold" ><b>EDK II HelloWorld  App  Lab  </b></span></p>
-<span style="font-size:0.8em" >First Setup for Building EDK II for EmulatorPkg, See <a href="https://gitpitch.com/tianocore-training/Platform_Build_Win_Emulator_Lab/master#/9">Lab Setup for EmulatorPkg </a></span>
+<span style="font-size:0.8em" >First Setup for Building EDK II, See <a href="https://gitpitch.com/tianocore-training/Platform_Build_Win_Emulator_Lab/master#/9">Lab Setup for EmulatorPkg </a></span>
 <p style="line-height:60%"><span style="font-size:0.8em" >Locate and Open </span><span style="font-size:0.6em" ><br>
-`MdeModulePkg/Application/HelloWorld/HelloWorld.c`</span></p>
+<font face="Consolas">MdeModulePkg/Application/HelloWorld/HelloWorld.c</font></span></p>
 <div class="left1">
 <span style="font-size:0.8em" >Notice the PCD values</span><br>
 <br>
 <br>
 <br>
-<span style="font-size:0.8em" >Build EmulatorPkg Emulation </span><br>
+<span style="font-size:0.78em" >Build EmulatorPkg Emulation </span><br>
 <p style="line-height:70%"><span style="font-size:0.8em" >Then Run HelloWorld at the Shell command interface</span></p>
 </div>
 <div class="right1">
@@ -241,7 +241,7 @@ Note:
 ---
 @title[EDK II HelloWorld  App  Lab steps]
 <p align="right"><span class="gold" ><b>EDK II HelloWorld  App  Lab  </b></span></p>
-<span style="font-size:0.8em" >Open a VS  Command Prompt and type: `cd C:\FW\edk2` then </span>
+<span style="font-size:0.8em" >Open a VS  Command Prompt and type: <font face="Consolas">cd C:\FW\edk2</font> then </span>
 ```shell
  C:/FW/edk2-ws> Setenv.bat
  C:/FW/edk2-ws> cd edk2
@@ -308,7 +308,7 @@ UefiMain (
 }
 ```
 @[12](PCD that is a boolean for if this feature is enabled)
-@[13](PCD that is an integer `For` loop for how many times to print to the the string)
+@[13](PCD that is an integer <font face="Consolas">For</font> loop for how many times to print to the the string)
 @[18](PCD that is a pointer for the string to print out) 
 
 Note:
@@ -325,7 +325,7 @@ Source from Helloworld.c
 
 Note:
 
-- look in file: `C:\fw\edk2\MdeModulePkg\MdeModulePkg.Dec`
+- look in file: <font face="Consolas">C:\fw\edk2\MdeModulePkg\MdeModulePkg.Dec</font>
 
 - This PCD defines the print string.
 -  This PCD is a sample to explain String typed PCD usage.
@@ -578,22 +578,22 @@ Note:
 @title[Lab 2: Application Lab – Update Files]
 <p align="right"><span class="gold" ><b>Lab 2: Application Lab – Update Files</b></span></p>
 <ul style="list-style-type:none">
- <li><span style="font-size:0.8em" >1.&nbsp;&nbsp; <font color="yellow">`.DSC` </font> (EmulatorPkg/EmulatorPkg.dsc)</span>  </li>
+ <li><span style="font-size:0.8em" >1.&nbsp;&nbsp; <font color="yellow" face="Consolas">.DSC </font> (EmulatorPkg/EmulatorPkg.dsc)</span>  </li>
   <ul style="list-style-type:none" style="line-height:0.7;">
-     <li><span style="font-size:0.7em" >`[Components . . .]`</span>  </li>
+     <li><span style="font-size:0.7em" ><font face="Consolas">[Components . . .]</font></span>  </li>
      <li><span style="font-size:0.7em" >&nbsp;&nbsp;Add INF to components section, before build options </span>  </li>
-     <li><span style="font-size:0.7em" >&nbsp;&nbsp;Hint: add after comment&nbsp;</span><span style="background-color: #101010"><span style="font-size:0.6em" >"<font color="#8C8C8C"># Add new modules here</font>"</span><br><span style="font-size:0.7em" > &nbsp;&nbsp;<span style="background-color: #101010">&nbsp;`SampleApp/SampleApp.inf` &nbsp;</span> </span> </li>
+     <li><span style="font-size:0.7em" >&nbsp;&nbsp;Hint: add after comment&nbsp;</span><span style="background-color: #101010"><span style="font-size:0.6em" >"<font color="#8C8C8C"># Add new modules here</font>"</span><br><span style="font-size:0.7em" > &nbsp;&nbsp;<span style="background-color: #101010">&nbsp;<font face="Consolas">SampleApp/SampleApp.inf</font> &nbsp;</span> </span> </li>
  </ul>
- <li><span style="font-size:0.8em" >2.&nbsp;&nbsp; <font color="yellow">`.INF` </font> file (SampleApp/SampleApp.inf) </span>  </li>
+ <li><span style="font-size:0.8em" >2.&nbsp;&nbsp; <font face="Consolas" color="yellow">.INF</font> file (SampleApp/SampleApp.inf) </span>  </li>
   <ul style="list-style-type:none" style="line-height:0.7;">
      <li><span style="font-size:0.7em" >Packages (all depend on MdePkg)</span>  </li>
-     <li><span style="font-size:0.7em" ><span style="background-color: #101010">&nbsp;&nbsp;`[Packages]`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`MdePkg/MdePkg.dec` </span> </span> </li>
-     <li><span style="font-size:0.7em" ><span style="background-color: #101010">&nbsp;&nbsp;`[LibraryClasses]`&nbsp;&nbsp;`UefiApplicationEntryPoint`</span> </span> </li>
+     <li><span style="font-size:0.7em" ><span style="background-color: #101010">&nbsp;&nbsp;<font face="Consolas">[Packages]</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="Consolas">MdePkg/MdePkg.dec</font> </span> </span> </li>
+     <li><span style="font-size:0.7em" ><span style="background-color: #101010">&nbsp;&nbsp;<font face="Consolas">[LibraryClasses]</font>&nbsp;&nbsp;<font face="Consolas">UefiApplicationEntryPoint</font></span> </span> </li>
  </ul>
- <li><span style="font-size:0.8em" >3.&nbsp;&nbsp; <font color="yellow">`.C` </font> file - Header references File (SampleApp/SampleApp.c) </span>  </li>
+ <li><span style="font-size:0.8em" >3.&nbsp;&nbsp; <font face="Consolas" color="yellow">.C </font> file - Header references File (SampleApp/SampleApp.c) </span>  </li>
   <ul style="list-style-type:none" style="line-height:0.7;">
-     <li><span style="font-size:0.7em" ><span style="background-color: #101010">`#include <Uefi.h>`</span> </span> </li>
-     <li><span style="font-size:0.7em" ><span style="background-color: #101010">`#include <Library/UefiApplicationEntryPoint.h>`</span></span>  </li>
+     <li><span style="font-size:0.7em" ><span style="background-color: #101010"><font face="Consolas">#include &lt;Uefi.h&gt;</font></span> </span> </li>
+     <li><span style="font-size:0.7em" ><span style="background-color: #101010"><font face="Consolas">#include &lt;Library/UefiApplicationEntryPoint.h&gt;</font></span></span>  </li>
  </ul>
 </ul>
 
@@ -685,7 +685,7 @@ The FILE_GUID was invalid or not updated from “XXX…” to a proper formatted
 </span></p>
 
 Note:
-The `FILE_GUID` was invalid or not updated from “`XXX…`” to a proper formatted GUID
+The <font face="Consolas">FILE_GUID</font> was invalid or not updated from “<font face="Consolas">XXX…</font>” to a proper formatted GUID
 - left is no FILE_GUID
 - right - left the "XXXX" 
 
@@ -702,7 +702,7 @@ Error on SampleApp.inf
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
-The `[Packages]` was invalid  or did not specify MdePkg/MdePkg.dec properly
+The <font face="Consolas">[Packages]</font> was invalid  or did not specify MdePkg/MdePkg.dec properly
 
 </span></p>
 
@@ -720,7 +720,7 @@ Compiler Error on SampleApp.c
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
-The `#include &lt;Library/UefiApplicationEntryPoint.h&gt;`  has a typo (“Application” not “Applications”)
+The <font face="Consolas">#include &lt;Library/UefiApplicationEntryPoint.h&gt;</font>  has a typo (“Application” not “Applications”)
 
 </span></p>
 
@@ -739,7 +739,7 @@ Compile Linker Error on unresolved reference
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
-The SampleApp.inf section `[LibraryClasses]` did not reference `UefiApplicationEntryPoint`
+The SampleApp.inf section <font face="Consolas">[LibraryClasses]</font> did not reference <font face="Consolas">UefiApplicationEntryPoint</font>
 
 </span></p>
 
@@ -772,7 +772,7 @@ Ensure the SampleApp.inf BaseName is SampleApp
 <p align="Left"><span class="gold" >Lab 2.1: Build Switches</span></p>
 <br>
 <div class="left1">
-<span style="font-size:0.8em" >In this lab, you’ll change the build switch `ADD_SHELL_STRING` to be always `TRUE`</span>
+<span style="font-size:0.8em" >In this lab, you’ll change the build switch <font face="Consolas">ADD_SHELL_STRING</font> to be always TRUE</span>
 </div>
 <div class="right1">
 <span style="font-size:0.8em" >&nbsp;  </span>
@@ -805,7 +805,7 @@ First delete directory   Build/EmulatorX64/DEBUG_tag/X64/ShellPkg
 ---?image=/assets/images/slides/Slide29.JPG
 @title[Lab 2.1: Compiling w/out Build Switch ]
 <p align="right"><span class="gold" ><b>Lab 2.1: Compiling w/out Build Switch</b></span></p>
-<span style="font-size:0.8em" >At the VS Command Prompt, Build <font color="yellow">without</font> the `-D` Switch</span>
+<span style="font-size:0.8em" >At the VS Command Prompt, Build <font color="yellow">without</font> the -D Switch</span>
 <div class="left1">
 <pre>
 ```
@@ -813,15 +813,15 @@ First delete directory   Build/EmulatorX64/DEBUG_tag/X64/ShellPkg
   C:/FW/edk2-ws/edk2> RunEmulator.bat
 ```
 </pre>
-<p style="line-height:80%"><span style="font-size:0.8em" >Check the Shell Version with the “`Ver`” command</span></p>
-<p style="line-height:80%"><span style="font-size:0.8em" >Build with the `-D ADD_SHELL_STRING` switch</span></p>
+<p style="line-height:80%"><span style="font-size:0.8em" >Check the Shell Version with the “<font face="Consolas">Ver</font>” command</span></p>
+<p style="line-height:80%"><span style="font-size:0.8em" >Build with the <font face="Consolas">-D ADD_SHELL_STRING</font> switch</span></p>
 <pre>
 ```
   C:/FW/edk2-ws/edk2> Build -D ADD_SHELL_STRING
   C:/FW/edk2-ws/edk2> RunEmulator.bat
 ```
 </pre>
-<p style="line-height:80%"><span style="font-size:0.8em" >Check the Shell Version with the “`Ver`” command</span></p>
+<p style="line-height:80%"><span style="font-size:0.8em" >Check the Shell Version with the “<font face="Consolas">Ver</font>” command</span></p>
 </div>
 <div class="right1">
 <span style="font-size:0.8em" >&nbsp;  </span>
@@ -833,21 +833,21 @@ Note:
 ---?image=/assets/images/slides/Slide30.JPG
 @title[Lab 2.1: Compiling w/out Build Switch 02]
 <p align="right"><span class="gold" ><b>Lab 2.1: Compiling w/out Build Switch</b></span></p>
-<p style="line-height:80%"><span style="font-size:0.8em" >Edit the file `C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc`<br>
-Change the `DEFINE ADD_SHELL_STRING = FALSE` to `TRUE` </span></p>
+<p style="line-height:80%"><span style="font-size:0.8em" >Edit the file <font face="Consolas">C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc</font><br>
+Change the <font face="Consolas">DEFINE ADD_SHELL_STRING = FALSE</font> to <font face="Consolas">TRUE</font> </span></p>
 <br>
 <br>
 <br>
 <br>
 <div class="left">
-<span style="font-size:0.8em" >Re-build - CD to `C:\FW\edk2`</span>
+<span style="font-size:0.8em" >Re-build - CD to <font face="Consolas">C:\FW\edk2</font></span>
 <pre>
 ```
    C:/FW/edk2-ws/edk2> Build
    C:/FW/edk2-ws/edk2> RunEmulator.bat
 ```
 </pre>
-<p style="line-height:80%"><span style="font-size:0.8em" >Check the Shell Version with the “`Ver`” command </span></p>
+<p style="line-height:80%"><span style="font-size:0.8em" >Check the Shell Version with the “<font face="Consolas">Ver</font>” command </span></p>
 </div>
 <div class="right1">
 <span style="font-size:0.8em" >&nbsp;  </span>
@@ -878,11 +878,11 @@ Note:
 <ul>
   <li><span style="font-size:0.8em" >. . .FW/LabSampleCode/LabSolutions/LessonB.2 </span>  </li>
   <li><span style="font-size:0.8em" >Copy the .inf and .c files to  C:/FW/edk2-ws/edk2/SampleApp </span>  </li>
-  <li><span style="font-size:0.8em" >Search sample DSC for reference to SampleApp.inf and add this line to your workspace DSC file<br>&nbsp;&nbsp;&nbsp;&nbsp; `C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc` </span>  </li>
+  <li><span style="font-size:0.8em" >Search sample DSC for reference to SampleApp.inf and add this line to your workspace DSC file<br>&nbsp;&nbsp;&nbsp;&nbsp; <font face="Consolas">C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc</font> </span>  </li>
 </ul>
 <br>
 <br>
-<span style="font-size:0.9em" >Invoke <b>`build`</b> again and check the solution </span>
+<span style="font-size:0.9em" >Invoke <b><font face="Consolas">build</font></b> again and check the solution </span>
 
 Note:
 
@@ -938,7 +938,7 @@ So it will build a single application orientated toward the one we just created 
 
 ---?image=/assets/images/slides/Slide36.JPG
 @title[Locating the “Print” Function ]
-<p align="right"><span class="gold" ><b>Lab 3 : Locating the `Print()` Function </b></span></p>
+<p align="right"><span class="gold" ><b>Lab 3 : Locating the <font face="Consolas">Print()</font> Function </b></span></p>
 
 Note:
 
@@ -1002,7 +1002,7 @@ UefiMain (
  Shell> 
 ```
 </pre>
-<p style="line-height:70%"><span style="font-size:0.8em" >Verify by using the Shell “`mem`” command </span></p>
+<p style="line-height:70%"><span style="font-size:0.8em" >Verify by using the Shell “<font face="Consolas">mem</font>” command </span></p>
 <span style="font-size:0.8em" >Exit</span>
 <pre>
 ```
@@ -1037,7 +1037,7 @@ Note:
 @title[Lab 4 : Add Wait for Event ]
 <p align="right"><span class="gold" ><b>Lab 4 : Add Wait for Event</b></span></p>
 <br>
-<p style="line-height:80%"><span style="font-size:0.8em" >Add code to make your application wait for a key press event (`WaitForEvent` / `WaitForKey`)</span></p>
+<p style="line-height:80%"><span style="font-size:0.8em" >Add code to make your application wait for a key press event (<font face="Consolas">WaitForEvent / WaitForKey</font>)</span></p>
 <br>
 <br>
 <br>
@@ -1060,19 +1060,19 @@ Note:
 ---
 @title[Lab 4 : How to locate functions ]
 <p align="right"><span class="gold" ><b>Lab 4 : HOW?</b></span></p>
-<span style="font-size:0.9em" >Locate Functions:  </span><span style="font-size:0.7em" > ` WaitForEvent / WaitForKey`</span>
+<span style="font-size:0.9em" >Locate Functions:  </span><span style="font-size:0.7em" > <font face="Consolas"> WaitForEvent / WaitForKey</font></span>
 <ul style="line-height:0.8;">
   <li><span style="font-size:0.8em" >Search MdePkg.chm</span><span style="font-size:0.5em" > - Note: "MdePkg Document With Libraries.chm" located in ... Lab_Material_FW/FW/Documentation</span></li>
   <ul style="list-style-type:disc">
-    <li><span style="font-size:0.65em" >Locate `WaitForEvent` in Boot Services</span> </li>
-    <li><span style="font-size:0.65em" >Locate `WaitForKey` and find ( `EFI_SIMPLE_TEXT_INPUT_PROTOCOL` will be part of `ConIn` ) </span> </li><br>
+    <li><span style="font-size:0.65em" >Locate <font face="Consolas">WaitForEvent</font> in Boot Services</span> </li>
+    <li><span style="font-size:0.65em" >Locate <font face="Consolas">WaitForKey</font> and find ( <font face="Consolas">EFI_SIMPLE_TEXT_INPUT_PROTOCOL</font> will be part of <font face="Consolas">ConIn</font> ) </span> </li><br>
    </ul>
   <li><span style="font-size:0.8em" >Check the <a href="http://uefi.org">UEFI Spec</a> for parameters needed:</span> </li>
    <ul style="list-style-type:disc">
-	<li><span style="font-size:0.65em" >`WaitForEvent` is referenced via Boot Services pointer, which is referenced via EFI System Table </span> </li>
-	<li><span style="font-size:0.65em" >`WaitForKey`	 can be referenced through the EFI System Table passed into the application</span> </li>
+	<li><span style="font-size:0.65em" ><font face="Consolas">WaitForEvent</font> is referenced via Boot Services pointer, which is referenced via EFI System Table </span> </li>
+	<li><span style="font-size:0.65em" ><font face="Consolas">WaitForKey</font>	 can be referenced through the EFI System Table passed into the application</span> </li>
     </ul>
-  <li><span style="font-size:0.8em" ><font color="yellow"><b>OR</b></font><br> Search the working space for `WaitForEvent` for an example</span> </li>
+  <li><span style="font-size:0.8em" ><font color="yellow"><b>OR</b></font><br> Search the working space for <font face="Consolas">WaitForEvent</font> for an example</span> </li>
     <ul style="list-style-type:disc">
 	<li><span style="font-size:0.65em" >One can be found in <a href="https://github.com/tianocore/edk2/blob/master/MdePkg/Library/UefiLib/Console.c">MdePkg/Library/UefiLib/Console.c</a>  ~ ln 569: </span> </li>
     </ul>
@@ -1094,7 +1094,7 @@ Note:
 
 ---?image=/assets/images/slides/Slide42.JPG
 @title[Lab 4 :Update the C File for WaitForKey ]
-<p align="right"><span class="gold" ><b>Lab 4 : Update the C File for `WaitForKey`</b></span></p>
+<p align="right"><span class="gold" ><b>Lab 4 : Update the C File for <font face="Consolas">WaitForKey</font></b></span></p>
 <br>
 
 
@@ -1146,7 +1146,7 @@ Note:
  
 ---?image=/assets/images/slides/Slide44.JPG
 @title[Lab 4 : Update SampleApp.c for gBS & gST ]
-<p align="right"><span class="gold" ><b>Lab 4 : Update for `gBS` & `gST`</b></span></p>
+<p align="right"><span class="gold" ><b>Lab 4 : Update for <font face="Consolas">gBS & gST</font></b></span></p>
 <p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" ><font color="black">
 &num;include &lt;Uefi.h&gt; <br>
 &num;include &lt;Library/UefiApplicationEntryPoint.h&gt; <br>
@@ -1288,10 +1288,10 @@ Same as Slide
 <span style="font-size:01.0em" ><font color="cyan"><b>How:</b></font></span>
 <div class="left1">
 <ol style="line-height:0.8;">
-  <li><span style="font-size:0.7em" >Add a Loop using `WaitForEvent` with `WaitForKey`</span> </li>
-  <li><span style="font-size:0.7em" >Use the `ReadKeyStroke` function from `ConIn`</span>  </li>
+  <li><span style="font-size:0.7em" >Add a Loop using <font face="Consolas">WaitForEvent with WaitForKey</font></span> </li>
+  <li><span style="font-size:0.7em" >Use the <font face="Consolas">ReadKeyStroke</font> function from <font face="Consolas">ConIn</font></span>  </li>
   <li><span style="font-size:0.7em" >Print back each key to console</span> </li>
-  <li><span style="font-size:0.7em" >Exit the loop when DOT “.” character followed by an &lt;`Enter`&gt; key  </span>  </li>
+  <li><span style="font-size:0.7em" >Exit the loop when DOT “.” character followed by an &lt;<font face="Consolas">Enter</font>&gt; key  </span>  </li>
 </ol>
 </div>
 <div class="right1">
@@ -1309,20 +1309,20 @@ Same as Slide
 @title[Lab 5 : How Hints]
 <p align="right"><span class="gold" ><b>Lab 5 : How Process (Hints)</b></span></p>
 <ul style="line-height:0.8;">
-  <li><span style="font-size:0.8em" >Use the same procedure as with Lab 4 to find “`ReadKeyStroke`” in the work space: 	<a href="https://github.com/tianocore/edk2/blob/master/MdePkg/Library/UefiLib/Console.c">  MdePkg/Library/UefiLib/Console.c</a>  ~ ln 558</span>  </li>
+  <li><span style="font-size:0.8em" >Use the same procedure as with Lab 4 to find “<font face="Consolas">ReadKeyStroke</font>” in the work space: 	<a href="https://github.com/tianocore/edk2/blob/master/MdePkg/Library/UefiLib/Console.c">  MdePkg/Library/UefiLib/Console.c</a>  ~ ln 558</span>  </li>
   <ul style="list-style-type:none">
-   <li><span style="font-size:0.6em" ><font color="white"><span style="background-color: #101010">`Status = gST->ConIn->ReadKeyStroke (gST->ConIn, Key);`</span></font></span></li><br>
+   <li><span style="font-size:0.6em" ><font color="white"><span style="background-color: #101010"><font face="Consolas">Status = gST-&gt;ConIn-&gt;ReadKeyStroke (gST-&gt;ConIn, Key);</font></span></font></span></li><br>
   </ul>
-  <li><span style="font-size:0.8em" >`ReadKeyStroke` uses buffer called `EFI_INPUT_KEY`&nbsp;&nbsp; ~ ln 399</span>  </li>
+  <li><span style="font-size:0.8em" ><font face="Consolas">ReadKeyStroke</font> uses buffer called <font face="Consolas">EFI_INPUT_KEY</font>&nbsp;&nbsp; ~ ln 399</span>  </li>
   <ul style="list-style-type:none">
-   <li><span style="font-size:0.6em" ><font color="white"><span style="background-color: #101010">`OUT EFI_INPUT_KEY  *Key,`</span></font></span></li><br>
+   <li><span style="font-size:0.6em" ><font color="white"><span style="background-color: #101010"><font face="Consolas">OUT EFI_INPUT_KEY  *Key,</font></span></font></span></li><br>
   </ul>
   <li><span style="font-size:0.8em" >TIP: Good Idea to zero out a buffer in your function  </span>  </li>
    <ul style="list-style-type:disc">
-      <li><span style="font-size:0.7em" >Use MdePkg.chm to find `ZeroMem()` function</span>  </li>
-      <li><span style="font-size:0.7em" >Use `ZeroMem()` on your variable buffer “`Key`” of type `EFI_INPUT_KEY`</span>  </li><br>
+      <li><span style="font-size:0.7em" >Use MdePkg.chm to find <font face="Consolas">ZeroMem()</font> function</span>  </li>
+      <li><span style="font-size:0.7em" >Use <font face="Consolas">ZeroMem()</font> on your variable buffer “<font face="Consolas">Key</font>” of type <font face="Consolas">EFI_INPUT_KEY</font></span>  </li><br>
    </ul> 
-  <li><span style="font-size:0.8em" >Use Boolean flag “`ExitLoop`” to exit your loop once the user enters a DOT “.” character.</span>  </li>
+  <li><span style="font-size:0.8em" >Use Boolean flag “<font face="Consolas">ExitLoop</font>” to exit your loop once the user enters a DOT “.” character.</span>  </li>
 </ul>
 
 Note:
@@ -1433,10 +1433,10 @@ End of Lab 5
 ---
 @title[Bonus Lab :Open Protocol example]
 <p align="right"><span class="gold" ><b>Bonus Exercise: Open Protocol Example</b></span></p>
-<span style="font-size:0.9em" >Write an Application using `argv`, `argc` parameters</span>
+<span style="font-size:0.9em" >Write an Application using <font face="Consolas">argv, argc</font> parameters</span>
 <ul style="line-height:0.7;">
  <li><span style="font-size:0.8em" >Captures command line parameters using Open Protocol</span></li>
- <li><span style="font-size:0.8em" >Will need to open </span><span style="font-size:0.5em" >`SHELL_INTERFACE_PROTOCOL`</span></li>
+ <li><span style="font-size:0.8em" >Will need to open </span><span style="font-size:0.5em" ><font face="Consolas">SHELL_INTERFACE_PROTOCOL</font></span></li>
  <li><span style="font-size:0.8em" >Note  : Requires ShellPkg</span></li>
 </ul>
 <br>
@@ -1450,7 +1450,7 @@ End of Lab 5
  Shell> SampleApp  test1 test2
 ```
 
-<span style="font-size:0.8em" >(hint: `..FW/LabSampleCode/ShellAppSample` has the solution)</span>
+<span style="font-size:0.8em" >(hint: <font face="Consolas">..FW/LabSampleCode/ShellAppSample</font> has the solution)</span>
 
 
 Note:
@@ -1589,9 +1589,9 @@ Note:
 ---
 @title[Lab 6 : Update AppPkg.dsc ]
 <p align="right"><span class="gold" ><b>Lab 6 : Update AppPkg.dsc </b></span></p>
-<p style="line-height:70%"><span style="font-size:0.8em" >Edit the AppPkg/AppPkg.dsc and add `SampleCApp.inf` at the end of the components section</span></p>
+<p style="line-height:70%"><span style="font-size:0.8em" >Edit the AppPkg/AppPkg.dsc and add <font face="Consolas">SampleCApp.inf</font> at the end of the components section</span></p>
 - <span style="font-size:0.6em" > (hint: search for "#### Sample Applications")</span>
-- <span style="font-size:0.6em" >`AppPkg/Applications/SampleCApp/SampleCApp.inf` </span>
+- <span style="font-size:0.6em" ><font face="Consolas">AppPkg/Applications/SampleCApp/SampleCApp.inf</font> </span>
 <br>
 
 ```php
