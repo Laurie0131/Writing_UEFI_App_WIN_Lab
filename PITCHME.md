@@ -1404,23 +1404,23 @@ Note:
 ---?image=/assets/images/slides/Slide44.JPG
 @title[Lab 4 : Update SampleApp.c for gBS & gST ]
 <p align="right"><span class="gold" ><b>Lab 4 : Update for <font face="Consolas">gBS & gST</font></b></span></p>
-<p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" ><font color="black">
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black"><br><br>
 &num;include &lt;Uefi.h&gt; <br>
 &num;include &lt;Library/UefiApplicationEntryPoint.h&gt; <br>
 &num;include &lt;Library/UefiLib.h&gt; <br>
 @color[red](&num;include &lt;Library/UefiBootServicesTableLib.h&gt;) &nbsp;&nbsp;&nbsp;@color[cyan](@size[1.4em](&larr;)) <br>
-// . . . <br>
+@color[blue](// . . . )<br>
 EFI_STATUS <br>
 EFIAPI <br>
-UefiMain ( <br>
-  IN EFI_HANDLE        ImageHandle, <br>
-  IN EFI_SYSTEM_TABLE  *SystemTable <br>
+UefiMain ( <br>&nbsp;&nbsp;
+  IN EFI_HANDLE        ImageHandle, <br>&nbsp;&nbsp;
+  IN EFI_SYSTEM_TABLE  *SystemTable <br>&nbsp;&nbsp;
   ) <br>
-{  <br>
-  @color[red](UINTN                EventIndex;) <br>
-  Print(L"System Table: 0x%p\n“, SystemTable);  <br>
-  @color[red](Print(L"\nPress any Key to  continue :\n"); )<br>
-  @color[red](gBS-&gt;WaitForEvent (1, &amp;gST-&gt;ConIn-&gt;WaitForKey, &amp;EventIndex); )<br>
+{  <br>&nbsp;&nbsp;
+  @color[red](UINTN                EventIndex;) <br>&nbsp;&nbsp;
+  Print(L"System Table: 0x%p\n“, SystemTable);  <br>&nbsp;&nbsp;
+  @color[red](Print(L"\nPress any Key to  continue :\n"); )<br>&nbsp;&nbsp;
+  @color[red](gBS-&gt;WaitForEvent (1, &amp;gST-&gt;ConIn-&gt;WaitForKey, &amp;EventIndex); )<br>&nbsp;&nbsp;
   return EFI_SUCCESS;  <br>
 } <br>
 <br><br><br>&nbsp;
@@ -1465,7 +1465,7 @@ UefiMain (
 // End of lab
 ```
 
-Note:
+
 
 ---
 @title[Lab 4 Build and Test SampleApp]
