@@ -611,9 +611,9 @@ Note:
 <br><br>
 <br><br>
 <br><br><font color="#00b0f0"> 
-/** @file <br>
+/&ast;&ast; @file <br>
   This is a simple shell application <br>
-**/ </font><br><font color="black">
+&ast;&ast;/ </font><br><font color="black">
  EFI_STATUS <br>
  EFIAPI <br>
  UefiMain ( <br>
