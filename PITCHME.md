@@ -1118,12 +1118,13 @@ So it will build a single application orientated toward the one we just created 
 
 
 ---?image=/assets/images/slides/Slide36.JPG
-@title[Locating the “Print” Function ]
+@title[Locating the "Print" Function ]
 <p align="right"><span class="gold" ><b>Lab 3 : Locating the <font face="Consolas">Print()</font> Function </b></span></p>
+<br>
 <ul style="list-style-type:none; line-height:0.7;">
-  <li><span style="font-size:0.7em;" >  1. Search the <font face="Consolas">MdePkg.chm</font> and find that the Print function by clicking on the “<u>I</u>ndex” tab</span></li>
+  <li><span style="font-size:0.7em;" >  1. Search the <font face="Consolas">MdePkg.chm</font> and find that the Print function by clicking<br>&nbsp;&nbsp;&nbsp;&nbsp; on the "<u>I</u>ndex" tab</span></li>
   <li><span style="font-size:0.7em;" >  2. Type “Print” and double click</span></li>
-  <li><span style="font-size:0.7em;" >  3. Scroll to the top in the right window to see that the print function is in the <font face="Consolas">UefiLib.h</font> file</span></li>
+  <li><span style="font-size:0.7em;" >  3. Scroll to the top in the right window to see that the print function is<br>&nbsp;&nbsp;&nbsp;&nbsp; in the <font face="Consolas">UefiLib.h</font> file</span></li>
 </ul>
 
 Note:
@@ -1139,6 +1140,52 @@ Note:
 ---?image=/assets/images/slides/Slide37.JPG
 @title[Modifying .C & .INF Files ]
 <p align="right"><span class="gold" ><b>Lab 3 : Modifying .C & .INF Files</b></span></p>
+
+@snap[north-west span-60]
+<br>
+<br>
+<br>
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black">
+ SampleApp.c <br>
+&numb;include &lt;Uefi.h&gt; <br>
+&numb;include &lt;Library/UefiApplicationEntryPoint.h&gt; <br>
+@color[red](&numb;include &lt;Library/UefiLib.h&gt;) <br>
+ <br>
+EFI_STATUS <br>
+EFIAPI <br>
+UefiMain ( <br>&nbsp;&nbsp;
+  IN EFI_HANDLE        ImageHandle, <br>&nbsp;&nbsp;
+  IN EFI_SYSTEM_TABLE  *SystemTable <br>&nbsp;&nbsp;
+  ) <br>
+{ <br>&nbsp;&nbsp;
+  @color[red](Print(L"System Table: 0x%p\n", SystemTable); ) <br>&nbsp;&nbsp;
+  return EFI_SUCCESS; <br>
+} <br>
+</font>
+</span></p>
+
+@snapend
+
+
+@snap[north-east span-40]
+<br>
+<br>
+<br>
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black">
+ SampleApp.inf <br>
+ [LibraryClasses] <br>&nbsp;&nbsp;
+  UefiApplicationEntryPoint <br>&nbsp;&nbsp;
+  @color[red](UefiLib)
+</font>
+</span></p>
+@snapend
+
+@snap[south span-60]
+<p style="line-height:60%" align="left" ><span style="font-size:0.47em;" >Note: 
+Solution files are in the lab materials directory
+</span></p>
+@snapend
+
 
 Note:
 
@@ -1166,6 +1213,8 @@ UefiMain (
   UefiLib
 
 </pre>
+
+
  
 
 
@@ -1174,27 +1223,26 @@ UefiMain (
 <p align="right"><span class="gold" ><b>Lab 3 : Build and Test SampleApp</b></span></p>
 <span style="font-size:0.8em" >At the VS Command Prompt </span>
 
-<pre>
-```
+
+```shell
   C:/FW/edk2-ws/edk2> Build
   C:/FW/edk2-ws/edk2> RunEmulator.bat
 ```
-</pre>
+
 <span style="font-size:0.8em" >Run the application from the shell</span>
-<pre>
-```
+
+```shell
  Shell> SampleApp
  System Table: 0x07E34018
  Shell> 
 ```
-</pre>
+
 <p style="line-height:70%"><span style="font-size:0.8em" >Verify by using the Shell “<font face="Consolas">mem</font>” command </span></p>
 <span style="font-size:0.8em" >Exit</span>
-<pre>
-```
+
+```shell
  Shell> Reset
 ```
-</pre>
 
 
 Note:
