@@ -1334,7 +1334,7 @@ Search the work space and find the following <font face="Consolas">@size[.8em](M
 </span></p>
 
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black"><br><br>
-    UINTN                  EventIndex;<br>
+   &nbsp;&nbsp;UINTN  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EventIndex;<br>
   @color[green](. . . )<br>
  <br>
 	@color[blue](// If we encounter error, continue to read another key in.) <br>
@@ -1345,7 +1345,7 @@ Search the work space and find the following <font face="Consolas">@size[.8em](M
       gBS-&gt;WaitForEvent (1, &gST-&gt;ConIn-&gt;WaitForKey, &EventIndex); <br>
     } <br>
   @color[green](. . .)	 <br>
- <br><br>
+ <br>
 <font face="Arial">
 @color[white](@size[1.2em]( Add the following to SampleApp.c))
 </font>
