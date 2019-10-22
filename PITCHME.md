@@ -208,7 +208,7 @@ Note:
 
 
 
----?image=/assets/images/slides/Slide7.JPG
+---?image=/assets/images/slides/Slide7_1.JPG
 @title[EDK II HelloWorld  App  Lab ]
 <p align="right"><span class="gold" ><b>EDK II HelloWorld  App  Lab  </b></span></p>
 <span style="font-size:0.8em" >First Setup for Building EDK II, See <a href="https://gitpitch.com/tianocore-training/Platform_Build_Win_Emulator_Lab/master#/9">Lab Setup for EmulatorPkg </a></span>
