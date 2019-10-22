@@ -610,7 +610,7 @@ Note:
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" >
 <br><br>
 <br><br>
-<br><br><font color="#00b0f0"> 
+<br><br><font color="blue"> 
 /&ast;&ast; @file <br>
   This is a simple shell application <br>
 &ast;&ast;/ </font><br><font color="black">
@@ -1365,7 +1365,6 @@ Search the work space and find the following <font face="Consolas">@size[.8em](M
 
 Note:
 
-Next sub slide to copy paste from
 
 Add the following "Lab 4" statements to SampleApp.c
 
@@ -1387,7 +1386,7 @@ UefiMain (
  Print(L"\nPress any Key to continue : \n");
  gBS->WaitForEvent (1, &gST->ConIn->WaitForKey, &EventIndex);
 
- ```
+```
 
  
 ---?image=/assets/images/slides/Slide43.JPG
