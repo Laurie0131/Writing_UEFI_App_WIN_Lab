@@ -1651,7 +1651,7 @@ UefiMain ( <br>&nbsp;&nbsp;
  <br>
 //Lab 4 <br>&nbsp;&nbsp;
  Print( L"\nPress any Key to continue : \n\n"); <br>&nbsp;&nbsp;
- gBS-&gt;WaitForEvent (1, &gST-&gt;ConIn-&gt;WaitForKey,    	&EventIndex); <br>
+ gBS-&gt;WaitForEvent (1, &gST-&gt;ConIn-&gt;WaitForKey,<br>&nbsp;  &nbsp;&nbsp;  	&EventIndex); <br>
 <br><br><br>&nbsp;
 </font>
 </span></p>
@@ -1663,21 +1663,20 @@ UefiMain ( <br>&nbsp;&nbsp;
 <p style="line-height:31%"><span style="font-size:0.45em;" >(hint: Lesson B.5 has the solution)</span)</p>
 <br>
 <br>
-<br>
-<p style="line-height:28%" align="left" ><span style="font-size:0.38em; font-family:Consolas;" ><font color="black">
+<p style="line-height:26%" align="left" ><span style="font-size:0.35em; font-family:Consolas;" ><font color="black">
 // Lab 5  <br>&nbsp;&nbsp;
- Print(L"Enter text. Include a dot ('.') in a \<br>&nbsp;&nbsp;sentence then <Enter> to exit:\n "); //  <br>&nbsp;&nbsp;
+ Print(L"Enter text. Include a dot ('.') in a \<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sentence then <Enter> to exit:\n "); //  <br>&nbsp;&nbsp;
  ZeroMem (&Key, sizeof (EFI_INPUT_KEY));  <br>&nbsp;&nbsp;
  gST-&gt;ConIn->ReadKeyStroke (gST-&gt;ConIn, &Key);  <br>&nbsp;&nbsp;
  ExitLoop = FALSE;  <br>&nbsp;&nbsp;
  do {    // Do loop until "DOT" and "enter"   <br>&nbsp;&nbsp;&nbsp;&nbsp;
-	 gBS-&gt;WaitForEvent (1, &gST-&gt;ConIn-&gt;WaitForKey,&EventIndex);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+	 gBS-&gt;WaitForEvent (1, &gST-&gt;ConIn-&gt;WaitForKey, &EventIndex);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
 	 gST-&gt;ConIn->ReadKeyStroke (gST-&gt;ConIn, &Key);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
 	 Print(L"%c", Key.UnicodeChar);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
 	 if (Key.UnicodeChar == CHAR_DOT){  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		ExitLoop = TRUE;  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     	 }  <br>&nbsp;&nbsp;&nbsp;&nbsp;
-    } while (!(Key.UnicodeChar == CHAR_LINEFEED  ||    <br>&nbsp;&nbsp;
+    } while (!(Key.UnicodeChar == CHAR_LINEFEED || <br>&nbsp;&nbsp;
 	    Key.UnicodeChar == CHAR_CARRIAGE_RETURN) ||   <br>&nbsp;&nbsp;
        !(ExitLoop) );  <br>&nbsp;&nbsp;
   <br>&nbsp;&nbsp;
