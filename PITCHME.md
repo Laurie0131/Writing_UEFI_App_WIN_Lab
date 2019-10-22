@@ -544,28 +544,30 @@ Note:
 ---?image=/assets/images/slides/Slide16.JPG
 @title[Lab 2: Sample Application INF file]
 <p align="right"><span class="gold" ><b>Lab 2: Sample Application INF file</b></span></p>
+
+<p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" ><font color="black">
+<br><br>
 <br>
-```
-[Defines]
-  INF_VERSION      =  0x00010005
-  BASE_NAME        =  XXXXXXXXXXXXXXXXXX        
-  FILE_GUID        =  XXXXXXXXXXXXXXXXXX       
-  MODULE_TYPE      =  XXXXXXXXXXXXXXXXXX
-  VERSION_STRING   =  1.0
-  ENTRY_POINT      =  UefiMain
+[Defines] <br>
+  INF_VERSION &nbsp;&nbsp;&nbsp;     =  0x00010005<br>
+  BASE_NAME   &nbsp;&nbsp;&nbsp;&nbsp;     =  XXXXXXXXXXXXXXXXXX     <br>   
+  FILE_GUID   &nbsp;&nbsp;&nbsp;&nbsp;     =  XXXXXXXXXXXXXXXXXX     <br>  
+  MODULE_TYPE &nbsp;&nbsp;     =  XXXXXXXXXXXXXXXXXX     <br>
+  VERSION_STRING =  1.0<br>
+  ENTRY_POINT  &nbsp;&nbsp;    =  UefiMain<br>
+<br>
+[Sources]<br>
+  XXXXXXXXX<br>
+[Packages]<br>
+  &num;XXXXXXXX<br>
+  <br>
+[LibraryClasses]<br>
+  &num;XXXXXXXXXXXXX<br>
+    <br>
+[Guids]<br>
+ &num; . . .<br>
+</font></span></p>
 
-[Sources]
-  XXXXXXXXX
-[Packages]
-  #XXXXXXXX
-  
-[LibraryClasses]
-  #XXXXXXXXXXXXX
-    
-[Guids]
- # . . .
-
-```
 
 <br>
 <p align="right"><span style="font-size:0.5em">Get a GUID: <a href="http://www.guidgenerator.com/">guidgerator.com</a></span></p>
@@ -574,9 +576,9 @@ Note:
 <br>
 <br>
 <p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" ><br>
-@color[#A8ff60](&larr;) &nbsp;SampleApp
-@color[#A8ff60](&larr;) &nbsp;Get a GUID <a href="http://www.guidgenerator.com/">guidgerator.com</a>
-@color[#A8ff60](&larr;) &nbsp;UEFI_APPLICATION
+@color[#A8ff60](&larr;) &nbsp;SampleApp <br> 
+@color[#A8ff60](&larr;) &nbsp;Get a GUID <a href="http://www.guidgenerator.com/">guidgerator.com</a> <br> 
+@color[#A8ff60](&larr;) &nbsp;UEFI_APPLICATION <br> 
 <br>
 <br>
 <br>
