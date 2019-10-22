@@ -1330,7 +1330,7 @@ Note:
 @title[Lab 4 :Update the C File for WaitForKey ]
 <p align="right"><span class="gold" ><b>Lab 4 : Update the C File for <font face="Consolas">WaitForKey</font></b></span></p>
 <p style="line-height:55%" align="left" ><span style="font-size:0.6em;" >
-Search the work space and find the following <font face="Consolas">MdePkg/Library/UefiLib/Console.c </font> ~ ln 563:
+Search the work space and find the following <font face="Consolas">@size[.8em](MdePkg/Library/UefiLib/Console.c )</font> ~ ln 563:
 </span></p>
 
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black">
@@ -1351,7 +1351,7 @@ Search the work space and find the following <font face="Consolas">MdePkg/Librar
 </font>
 <br>
  <br>
- <br>
+ <br><br>
  @color[red](UINTN  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EventIndex; ) <br>
  Print(L"System Table: 0x%p\n",SystemTable);  <br>
  @color[red](Print&lpar;L"\nPress any Key to continue : \n"&rpar;;) <br>
