@@ -928,7 +928,7 @@ Note:
 <p align="right"><span class="gold" ><b>Lab 2.1: Compiling w/out Build Switch</b></span></p>
 <span style="font-size:0.8em" >At the VS Command Prompt, Build <font color="yellow">without</font> the <b>"-D"</b> Switch</span>
 
-@snap[north-west span-68]
+@snap[north-west span-60]
 <br>
 <br>
 <br>
@@ -940,13 +940,16 @@ Note:
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" ><br>&nbsp;</span></p>)
 @snapend
 
-@snap[north-west span-65 ]
+@snap[north-west span-58 ]
+<br>
+<br>
+<br>
 <p style="line-height:40%" align="left" ><span style="font-size:0.45em; font-family:Consolas;" >
 <font face="Arial"><b>Delete</b> </font>Build/EmulatorX64/DEBUG_@color[cyan](<i>tag</i>)/X64/@color[yellow](ShellPkg) <br>&nbsp;&nbsp;
   C:/FW/edk2-ws/edk2> Build<br> &nbsp;&nbsp;
   C:/FW/edk2-ws/edk2> RunEmulator.bat<br>
 </span></p>
-<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+<p style="line-height:70%" align="left" ><span style="font-size:0.7em;" >
 Check the Shell version with “Ver” command <br>
 Build with  the <font face="Consolas">–D ADD_SHELL_STRING</font>
 </span></p>
@@ -957,7 +960,7 @@ Build with  the <font face="Consolas">–D ADD_SHELL_STRING</font>
   C:/FW/edk2-ws/edk2> RunEmulator.bat<br>
 </span></p>
 
-<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+<p style="line-height:70%" align="left" ><span style="font-size:0.7em;" >
 Check the Shell version with “Ver” command <br>
 </span></p>
 @snapend
