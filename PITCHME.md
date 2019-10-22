@@ -1670,7 +1670,7 @@ UefiMain ( <br>&nbsp;&nbsp;
  gST-&gt;ConIn->ReadKeyStroke (gST-&gt;ConIn, &Key);  <br>&nbsp;&nbsp;
  ExitLoop = FALSE;  <br>&nbsp;&nbsp;
  do {    // Do loop until "DOT" and "enter"   <br>&nbsp;&nbsp;&nbsp;&nbsp;
-	 gBS-&gt;WaitForEvent (1, &gST-&gt;ConIn-&gt;WaitForKey, &nbsp;&nbsp;&nbsp;&nbsp;&EventIndex);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+	 gBS-&gt;WaitForEvent (1, &gST-&gt;ConIn-&gt;WaitForKey, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&EventIndex);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
 	 gST-&gt;ConIn->ReadKeyStroke (gST-&gt;ConIn, &Key);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
 	 Print(L"%c", Key.UnicodeChar);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
 	 if (Key.UnicodeChar == CHAR_DOT){  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
