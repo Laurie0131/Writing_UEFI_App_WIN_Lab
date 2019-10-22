@@ -609,6 +609,7 @@ Note:
 
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" >
 <br><br>
+<br><br>
 <br><br><font color="#00b0f0"> 
 /** @file <br>
   This is a simple shell application <br>
@@ -626,9 +627,9 @@ Note:
 </span></p>
 
 
-@snap[south-east span-45 ]
-<p style="line-height:45%" align="left" ><span style="font-size:01.02em">@color[#A8ff60](&larr;) </span></p>
-<br>
+@snap[south-east span-55 ]
+<p style="line-height:45%" align="left" ><span style="font-size:02.02em">@color[#A8ff60](&larr;) </span></p>
+<br><br><br>
 @snapend
 
 @snap[south-east span-39 ]
