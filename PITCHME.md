@@ -1049,13 +1049,13 @@ Note:
   <li><span style="font-size:0.8em" >Copy the .inf and .c files to  C:/FW/edk2-ws/edk2/SampleApp </span>  </li>
   <li><span style="font-size:0.8em" >Search sample DSC for reference to SampleApp.inf and add this line to your workspace DSC file<br>&nbsp;&nbsp;&nbsp;&nbsp; <font face="Consolas">C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc</font> </span>  </li>
 </ul>
-<p style="line-height:45%" align="left" ><span style="font-size:0.6em; font-family:Consolas;" >
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="background-color: #101010">&nbsp;&nbsp;@size[.8em](SampleApp/SampleApp.inf)&nbsp;&nbsp;</span>
+<p style="line-height:45%" align="left" ><span style="font-size:0.7em; font-family:Consolas;" >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="background-color: #101010">&nbsp;&nbsp;@size[.8em](SampleApp/SampleApp.inf)&nbsp;&nbsp;</span>
 <br><br>&nbsp;
 </span></p>
 
-<br>
-<span style="font-size:0.9em" >Invoke <b>"<font face="Consolas">build</font>"</b> again and check the solution </span>
+
+<span style="font-size:0.8em" >Invoke <b>"<font face="Consolas">build</font>"</b> again and check the solution </span>
 
 Note:
 
