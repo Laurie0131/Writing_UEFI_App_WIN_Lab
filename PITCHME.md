@@ -330,8 +330,8 @@ After the section <font face="Consolas">[PcdsFixedAtBuild] </font> (search for â
 <br>
 </span></p>
 
-<p style="line-height:45%" align="left" ><span style="font-size:0.52em; font-family:Consolas;" ><font color="black">
-[PcdsFixedAtBuild]
+<p style="line-height:45%" align="left" ><span style="font-size:0.52em; font-family:Consolas;" ><font color="black"><br>
+[PcdsFixedAtBuild]<br>
 gEfiMdeModulePkgTokenSpaceGuid.PcdHelloWorldPrintTimes|3
 </font>
 </span></p>
