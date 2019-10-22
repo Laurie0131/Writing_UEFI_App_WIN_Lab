@@ -1027,15 +1027,15 @@ Note:
 ---
 @title[Lab 2: What we learned from LAB 2]
 <p align="right"><span class="gold" ><b>What we learned from LAB 2</b></span></p>
-<ul style="list-style-type:none; line-height:0.7;">
- <li><span style="font-size:0.7em">1. How to write a simple native UEFI Application </span></li>
- <li><span style="font-size:0.7em">2. Each module requires a .inf file with a unique GUID (use http://www.guidgenerator.com/ )  </span></li>
- <li><span style="font-size:0.7em">3. The module created will be the base name defined in the .inf file </span></li>
- <li><span style="font-size:0.7em">4. The module’s .inf  file is required to be included in the platform .dsc file </span></li>
- <li><span style="font-size:0.7em">5. The [Packages] section is required at minimum to include MdePkg/dePkg.dec </span></li>
- <li><span style="font-size:0.7em">6. When using a Build Switch (-D) on the command line it overrides the value in the .DSC file </span></li>
- <li><span style="font-size:0.7em">7. If it is a Library is getting updated, it is required to Build clean or delete the previous built module(s) including the library depending on what is getting re-built. </span></li>
-</ul>
+<ol style="list-style-type:none; line-height:0.7;">
+ <li><span style="font-size:0.7em">How to write a simple native UEFI Application </span></li>
+ <li><span style="font-size:0.7em">Each module requires a .inf file with a unique GUID (use http://www.guidgenerator.com/ )  </span></li>
+ <li><span style="font-size:0.7em">The module created will be the base name defined in the .inf file </span></li>
+ <li><span style="font-size:0.7em">The module’s .inf  file is required to be included in the platform .dsc file </span></li>
+ <li><span style="font-size:0.7em">The [Packages] section is required at minimum to include MdePkg/dePkg.dec </span></li>
+ <li><span style="font-size:0.7em">When using a Build Switch (-D) on the command line it overrides the value in the .DSC file </span></li>
+ <li><span style="font-size:0.7em">If it is a Library is getting updated, it is required to Build clean or delete the previous built module(s) including the library depending on what is getting re-built. </span></li>
+</ol>
 
 Note:
 
