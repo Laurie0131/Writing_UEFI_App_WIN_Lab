@@ -1333,7 +1333,7 @@ Note:
 Search the work space and find the following <font face="Consolas">@size[.8em](MdePkg/Library/UefiLib/Console.c )</font> ~ ln 563:
 </span></p>
 
-<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black">
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black"><br><br>
     UINTN                  EventIndex;<br>
   @color[green](. . . )<br>
  <br>
