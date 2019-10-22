@@ -322,14 +322,15 @@ Source from Helloworld.c
 @title[EDK II HelloWorld  App  Lab solution]
 <p align="right"><span class="gold" ><b>EDK II HelloWorld  App  Solution </b></span></p>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
-Edit the file <font face="Consolas">C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc</font><br>
+Edit the file <font face="Consolas">C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc</font><br><br>
 After the section <font face="Consolas">[PcdsFixedAtBuild] </font> (search for “<font face="Consolas">PcdsFixedAtBuild</font>” or “Hello”)
+<br>
 <br>
 <br>
 <br>
 </span></p>
 
-<p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" ><font color="black">
+<p style="line-height:45%" align="left" ><span style="font-size:0.52em; font-family:Consolas;" ><font color="black">
 [PcdsFixedAtBuild]
 gEfiMdeModulePkgTokenSpaceGuid.PcdHelloWorldPrintTimes|3
 </font>
