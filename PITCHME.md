@@ -937,6 +937,7 @@ Note:
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" ><br>&nbsp;</span></p>)
 <br>
 <br>
+<br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" ><br>&nbsp;</span></p>)
 @snapend
 
@@ -947,7 +948,7 @@ Note:
 <p style="line-height:40%" align="left" ><span style="font-size:0.45em; font-family:Consolas;" ><br>
 <font face="Arial"><b>Delete</b> </font>Build/EmulatorX64/DEBUG_@color[cyan](<i>tag</i>)/X64/@color[yellow](ShellPkg) <br><br>&nbsp;&nbsp;
   C:/FW/edk2-ws/edk2> Build<br> &nbsp;&nbsp;
-  C:/FW/edk2-ws/edk2> RunEmulator.bat<br>
+  C:/FW/edk2-ws/edk2> RunEmulator.bat<br><br>
 </span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.7em;" >
 Check the Shell version with “Ver” command <br>
