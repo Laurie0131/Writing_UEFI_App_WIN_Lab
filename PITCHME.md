@@ -1370,22 +1370,22 @@ Add the following "Lab 4" statements to SampleApp.c
 
 <pre>
 ```c
-EFI_STATUS
-EFIAPI
-UefiMain (
-  IN EFI_HANDLE        ImageHandle,
-  IN EFI_SYSTEM_TABLE  *SystemTable
-  )
-{
-// Lab 4
- UINTN                      EventIndex; 
-
-// Lab 3
- Print(L"System Table: 0x%08x",SystemTable); 
-
- // Lab 4
- Print(L"\nPress any Key to continue : \n");
- gBS->WaitForEvent (1, &gST->ConIn->WaitForKey, &EventIndex);
+EFI_STATUS<br>
+EFIAPI<br>
+UefiMain (<br>
+  IN EFI_HANDLE        ImageHandle,<br>
+  IN EFI_SYSTEM_TABLE  *SystemTable<br>
+  )<br>
+{<br>
+// Lab 4<br>
+ UINTN                      EventIndex; <br>
+<br>
+// Lab 3<br>
+ Print(L"System Table: 0x%08x",SystemTable); <br>
+<br>
+ // Lab 4<br>
+ Print(L"\nPress any Key to continue : \n");<br>
+ gBS->WaitForEvent (1, &gST->ConIn->WaitForKey, &EventIndex);<br>
 
 ```
 </pre>
