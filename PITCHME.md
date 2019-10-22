@@ -1576,7 +1576,7 @@ Same as Slide
 <p style="line-height:80%"><span style="font-size:0.9em" >Create a Simple Typewriter Function using the SampleApp from Lab 4 </p></span>
 <span style="font-size:01.0em" ><font color="cyan"><b>How:</b></font></span>
 <div class="left1">
-<ol style="line-height:0.8;">
+ <ol style="line-height: 60%">
   <li><span style="font-size:0.7em" >Add a Loop using <font face="Consolas">WaitForEvent with WaitForKey</font></span> </li>
   <li><span style="font-size:0.7em" >Use the <font face="Consolas">ReadKeyStroke</font> function from <font face="Consolas">ConIn</font></span>  </li>
   <li><span style="font-size:0.7em" >Print back each key to console</span> </li>
