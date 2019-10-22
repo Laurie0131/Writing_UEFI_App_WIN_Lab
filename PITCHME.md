@@ -980,8 +980,9 @@ Note:
 ---?image=/assets/images/slides/Slide30.JPG
 @title[Lab 2.1: Compiling w/out Build Switch 02]
 <p align="right"><span class="gold" ><b>Lab 2.1: Compiling w/out Build Switch</b></span></p>
-@snap[north-west span-60]
-<br>
+<p style="line-height:70%"><span style="font-size:0.7em" ><b>Edit</b> the file <font face="Consolas">C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc</font></span></p>
+
+@snap[north-west span-52]
 <br>
 <br>
 <br>
@@ -997,25 +998,26 @@ Note:
 @snap[north-west span-60]
 <br>
 <br>
-<p style="line-height:70%"><span style="font-size:0.7em" >Edit the file <font face="Consolas">C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc</font><br>
+<br>
+<p style="line-height:70%"><span style="font-size:0.7em" >
 <b>Change</b><br>
-<font face="Consolas">DEFINE ADD_SHELL_STRING = </font> <br>
-@size[.8em](Save the file)<br>
-Delete directory <font face="Consolas">Build\ . . .\ Shellpkg</font> <br>
+<font face="Consolas">DEFINE ADD_SHELL_STRING = @color[yellow](TRUE)</font> <br>
+@size[.8em](&lpar;Save the file&rpar;)<br>
+@size[.8em](Delete directory <font face="Consolas">Build\ . . .\ Shellpkg)</font> <br>
 
 Re-Build – Cd to <font face="Consolas">/FW/edk2-ws/edk2<br>&nbsp;&nbsp;
 
    @size[.7em](C:/FW/edk2-ws/edk2> Build)<br>&nbsp;&nbsp;
    @size[.7em](C:/FW/edk2-ws/edk2> RunEmulator.bat)<br><br>
 </font>
-
+<br><br>
 Check the Shell version with “<font face="Consolas">Ver</font>”  command 
 </span></p>
 @snapend
 
 
 @snap[south-west span-100 ]
-<p style="line-height:50%" align="left" ><span style="font-size:0.57em;" >
+<p style="line-height:45%" align="left" ><span style="font-size:0.5em;" >
 @color[yellow](NOTE:) You will need to Delete directory:   <font face="Consolas">%WORKSPACE%/Build/EmulatorX64/DEBUG_@color[cyan](<i>tag</i>)/X64/@color[yellow](ShellPkg) </font>
 Between each build
 </span></p>
