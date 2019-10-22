@@ -1406,6 +1406,7 @@ Note:
 <p align="right"><span class="gold" ><b>Lab 4 : Update for <font face="Consolas">gBS & gST</font></b></span></p>
 
 @snap[north-west span-100]
+<br>
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black"><br><br><br>
 &num;include &lt;Uefi.h&gt; <br>
 &num;include &lt;Library/UefiApplicationEntryPoint.h&gt; <br>
@@ -1431,7 +1432,8 @@ UefiMain ( <br>&nbsp;&nbsp;
 @snapend
 
 
-@snap[north-east span-30]
+@snap[north-east span-32]
+<br>
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black"><br><br><br>
  <br>
  <br>
@@ -1444,10 +1446,10 @@ UefiMain ( <br>&nbsp;&nbsp;
   <br>&nbsp;&nbsp;
   <br>&nbsp;&nbsp;
    <br>
- <br>&nbsp;&nbsp;
+ <br>
   @color[cyan](@size[1.4em](&larr;) Lab 4)<br>&nbsp;&nbsp;
-   <br>&nbsp;&nbsp;
-  @color[cyan](@size[1.4em](&larr;) Lab 4)<br>&nbsp;&nbsp;
+   <br>
+  @color[cyan](@size[1.4em](&larr;) Lab 4)<br>
   @color[cyan](@size[1.4em](&larr;) Lab 4)<br>&nbsp;&nbsp;
   <br>
  <br>
