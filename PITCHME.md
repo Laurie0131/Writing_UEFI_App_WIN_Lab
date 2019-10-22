@@ -779,11 +779,14 @@ Note:
 @title[Possible Build Errors ]
 <p align="right"><span class="gold" ><b>Possible Build Errors</b></span></p>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+<br>
 Error on SampleApp.inf
 
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
-<br><br><br>&nbsp;
+<br><br><br>
+<br><br><br>
+<br><br><br>
 The FILE_GUID was invalid or not updated from “XXX…” to a proper formatted GUID
 
 </span></p>
@@ -801,11 +804,14 @@ The <font face="Consolas">FILE_GUID</font> was invalid or not updated from “<f
 <p align="right"><span class="gold" ><b>Possible Build Errors</b></span></p>
 
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+<br>
 Error on SampleApp.inf
 
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
+<br><br><br>
+<br><br><br>
 The <font face="Consolas">[Packages]</font> was invalid  or did not specify MdePkg/MdePkg.dec properly
 
 </span></p>
@@ -819,11 +825,14 @@ The `[Packages]` was invalid  or did not specify MdePkg/MdePkg.dec properly
 @title[Possible Build Errors 03]
 <p align="right"><span class="gold" ><b>Possible Build Errors</b></span></p>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+<br>
 Compiler Error on SampleApp.c
 
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
+<br><br><br>
+<br><br><br>
 The <font face="Consolas">#include &lt;Library/UefiApplicationEntryPoint.h&gt;</font>  has a typo (“Application” not “Applications”)
 
 </span></p>
@@ -837,12 +846,15 @@ Note:
 @title[Possible Build Errors 04 ]
 <p align="right"><span class="gold" ><b>Possible Build Errors</b></span></p>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+<br>
 Compile Linker Error on unresolved reference
 
 
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
+<br><br><br>
+<br><br><br>
 The SampleApp.inf section <font face="Consolas">[LibraryClasses]</font> did not reference <font face="Consolas">UefiApplicationEntryPoint</font>
 
 </span></p>
@@ -857,12 +869,15 @@ The SampleApp.inf section `[LibraryClasses]` did not reference `UefiApplicationE
 @title[Possible Build Errors 05]
 <p align="right"><span class="gold" ><b>Possible Build Errors</b></span></p>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+<br>
 Error at the Shell prompt
 
 
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
+<br><br><br>
+<br><br><br>
 Ensure the SampleApp.inf BaseName is SampleApp 
 </span></p>
 
