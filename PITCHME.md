@@ -1404,11 +1404,13 @@ Note:
 ---?image=/assets/images/slides/Slide44.JPG
 @title[Lab 4 : Update SampleApp.c for gBS & gST ]
 <p align="right"><span class="gold" ><b>Lab 4 : Update for <font face="Consolas">gBS & gST</font></b></span></p>
-<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black"><br><br>
+
+@snap[north-west span-100]
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black"><br><br><br>
 &num;include &lt;Uefi.h&gt; <br>
 &num;include &lt;Library/UefiApplicationEntryPoint.h&gt; <br>
 &num;include &lt;Library/UefiLib.h&gt; <br>
-@color[red](&num;include &lt;Library/UefiBootServicesTableLib.h&gt;) &nbsp;&nbsp;&nbsp;@color[cyan](@size[1.4em](&larr;) Lab 4) <br>
+@color[red](&num;include &lt;Library/UefiBootServicesTableLib.h&gt;) &nbsp;&nbsp;&nbsp; <br>
 @color[blue](// . . . )<br>
 EFI_STATUS <br>
 EFIAPI <br>
@@ -1417,15 +1419,43 @@ UefiMain ( <br>&nbsp;&nbsp;
   IN EFI_SYSTEM_TABLE  *SystemTable <br>&nbsp;&nbsp;
   ) <br>
 {  <br>&nbsp;&nbsp;
-  @color[red](UINTN                EventIndex;) @color[cyan](@size[1.4em](&larr;) Lab 4)<br>&nbsp;&nbsp;
+  @color[red](UINTN                EventIndex;)<br>&nbsp;&nbsp;
   Print(L"System Table: 0x%p\n“, SystemTable);  <br>&nbsp;&nbsp;
-  @color[red](Print&lpar;L"\nPress any Key to  continue :\n"&rpar;; )@color[cyan](@size[1.4em](&larr;) Lab 4)<br>&nbsp;&nbsp;
-  @color[red](gBS-&gt;WaitForEvent &lpar;1, &amp;gST-&gt;ConIn-&gt;WaitForKey, &amp;EventIndex&rpar;; )@color[cyan](@size[1.4em](&larr;) Lab 4)<br>&nbsp;&nbsp;
+  @color[red](Print&lpar;L"\nPress any Key to  continue :\n"&rpar;; )<br>&nbsp;&nbsp;
+  @color[red](gBS-&gt;WaitForEvent &lpar;1, &amp;gST-&gt;ConIn-&gt;WaitForKey, &amp;EventIndex&rpar;; )<br>&nbsp;&nbsp;
   return EFI_SUCCESS;  <br>
 } <br>
 <br><br><br>&nbsp;
 </font>
 </span></p>
+@snapend
+
+
+@snap[north-east span-30]
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black"><br><br><br>
+ <br>
+ <br>
+<br>
+@color[cyan](@size[1.4em](&larr;) Lab 4) <br>
+<br>
+<br>
+ <br>
+<br>&nbsp;&nbsp;
+  <br>&nbsp;&nbsp;
+  <br>&nbsp;&nbsp;
+   <br>
+ <br>&nbsp;&nbsp;
+  @color[cyan](@size[1.4em](&larr;) Lab 4)<br>&nbsp;&nbsp;
+   <br>&nbsp;&nbsp;
+  @color[cyan](@size[1.4em](&larr;) Lab 4)<br>&nbsp;&nbsp;
+  @color[cyan](@size[1.4em](&larr;) Lab 4)<br>&nbsp;&nbsp;
+  <br>
+ <br>
+<br><br><br>&nbsp;
+</font>
+</span></p>
+@snapend
+
 
 
 Note:
