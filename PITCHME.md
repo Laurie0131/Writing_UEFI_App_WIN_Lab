@@ -439,48 +439,74 @@ Note:
 <p align="right"><span class="gold" ><b>LAB 2 - Writing a Simple UEFI Application</b></span></p>
 <span style="font-size:0.9em"  >In this lab, you’ll learn how to write simple UEFI applications. </span>
 
-<div class="left">
+@snap[north-west span-50 ]
+<br>
+<br>
+<br>
+<br>
 <span style="font-size:0.9em" ><font color="cyan">“C” file</font></span>
-<pre>
-```
-EFI_STATUS
-EFIAPI
-UefiMain (
-  IN EFI_HANDLE        ImageHandle,
-  IN EFI_SYSTEM_TABLE *SystemTable
-)
-{ 
-  return EFI_SUCCESS;
-}
-```
-</pre>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
 
+@snap[north-east span-48]
+<br>
+<br>
+<br>
+<br>
+<span style="font-size:0.9em" ><font color="yellow">.inf file</font></span>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[south-west span-50 ]
 <ul style="line-height:0.8;">
   <li><span style="font-size:0.7em" >What goes into the Simplest “C”</span></li>
   <li><span style="font-size:0.7em" >Start with what should go into the Simplest .INF file</span></li>
 </ul>  
-</div>
-<div class="right1">
-<span style="font-size:0.9em" ><font color="yellow">.inf file</font></span>
-<pre>
-```
-[Defines]
-  INF_VERSION    = 
-  BASE_NAME      = 
-  FILE_GUID      = 
-  MODULE_TYPE    = 
-  VERSION_STRING = 
-  ENTRY_POINT    = 
- 
-[Sources]
- 
-[Packages]
- 
-[LibraryClasses]
+@snapend
 
-```
-</pre>
-</div>
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" ><br>
+EFI_STATUS <br>
+EFIAPI <br>
+UefiMain ( <br>
+  IN EFI_HANDLE        ImageHandle, <br>
+  IN EFI_SYSTEM_TABLE *SystemTable <br>
+) <br>
+{  <br>
+  return EFI_SUCCESS; <br>
+} <br>
+</span></p>
+@snapend
+
+@snap[north-east span-46 ]
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" ><br>
+[Defines] <br>
+  INF_VERSION    =  <br>
+  BASE_NAME      =  <br>
+  FILE_GUID      =  <br>
+  MODULE_TYPE    =  <br>
+  VERSION_STRING =  <br>
+  ENTRY_POINT    =  <br>
+  <br>
+[Sources] <br>
+  <br>
+[Packages] <br>
+  <br>
+[LibraryClasses] <br>
+</span></p>
+@snapend
+
 
 Note:
 
