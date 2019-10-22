@@ -1027,7 +1027,7 @@ Note:
 ---
 @title[Lab 2: What we learned from LAB 2]
 <p align="right"><span class="gold" ><b>What we learned from LAB 2</b></span></p>
-<ol style="line-height: 70%">
+<ol style="line-height: 60%">
  <li><span style="font-size:0.7em">How to write a simple native UEFI Application </span></li>
  <li><span style="font-size:0.7em">Each module requires a .inf file with a unique GUID (use http://www.guidgenerator.com/ )  </span></li>
  <li><span style="font-size:0.7em">The module created will be the base name defined in the .inf file </span></li>
