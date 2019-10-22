@@ -926,27 +926,46 @@ Note:
 ---?image=/assets/images/slides/Slide29.JPG
 @title[Lab 2.1: Compiling w/out Build Switch ]
 <p align="right"><span class="gold" ><b>Lab 2.1: Compiling w/out Build Switch</b></span></p>
-<span style="font-size:0.8em" >At the VS Command Prompt, Build <font color="yellow">without</font> the -D Switch</span>
-<div class="left1">
-<pre>
-```
-  C:/FW/edk2-ws/edk2> Build
-  C:/FW/edk2-ws/edk2> RunEmulator.bat
-```
-</pre>
-<p style="line-height:80%"><span style="font-size:0.8em" >Check the Shell Version with the “<font face="Consolas">Ver</font>” command</span></p>
-<p style="line-height:80%"><span style="font-size:0.8em" >Build with the <font face="Consolas">-D ADD_SHELL_STRING</font> switch</span></p>
-<pre>
-```
-  C:/FW/edk2-ws/edk2> Build -D ADD_SHELL_STRING
-  C:/FW/edk2-ws/edk2> RunEmulator.bat
-```
-</pre>
-<p style="line-height:80%"><span style="font-size:0.8em" >Check the Shell Version with the “<font face="Consolas">Ver</font>” command</span></p>
-</div>
-<div class="right1">
-<span style="font-size:0.8em" >&nbsp;  </span>
-</div>
+<span style="font-size:0.8em" >At the VS Command Prompt, Build <font color="yellow">without</font> the <b>"-D"</b> Switch</span>
+
+@snap[north-west span-50 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" ><br>&nbsp;</span></p>)
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" ><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-55 ]
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" >
+<font face="Arial"><b>Delete</b> </font>Build/EmulatorX64/DEBUG_@color[cyan](<i>tag</i>)/X64/@color[yellow](ShellPkg) <br>&nbsp;&nbsp;
+  C:/FW/edk2-ws/edk2> Build<br> &nbsp;&nbsp;
+  C:/FW/edk2-ws/edk2> RunEmulator.bat<br>
+</span></p>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Check the Shell version with “Ver” command <br>
+Build with  the <font face="Consolas">–D ADD_SHELL_STRING</font>
+</span></p>
+
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" >
+<font face="Arial"><b>Delete</b> </font>Build/EmulatorX64/DEBUG_@color[cyan](<i>tag</i>)/X64/@color[yellow](ShellPkg)<br>&nbsp;&nbsp;
+  C:/FW/edk2-ws/edk2> Build -D Add_SHELL_STRING<br> &nbsp;&nbsp;
+  C:/FW/edk2-ws/edk2> RunEmulator.bat<br>
+</span></p>
+
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Check the Shell version with “Ver” command <br>
+</span></p>
+@snapend
+
+@snap[south-west span-100 ]
+<p style="line-height:50%" align="left" ><span style="font-size:0.57em;" >
+@color[yellow](NOTE:) You will need to Delete directory:   <font face="Consolas">Build/EmulatorX64/DEBUG_@color[cyan](<i>tag</i>)/X64/@color[yellow](ShellPkg) </font>
+Between each build
+</span></p>
+@snapend
+
 
 Note:
 
