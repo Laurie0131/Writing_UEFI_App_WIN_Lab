@@ -1447,10 +1447,10 @@ UefiMain ( <br>&nbsp;&nbsp;
   <br>&nbsp;&nbsp;
    <br>
  <br>
-  @color[cyan](@size[1.4em](&larr;) Lab 4)<br>&nbsp;&nbsp;
+  @color[#7030a0](@size[1.4em](&larr;) Lab 4)<br>&nbsp;&nbsp;
    <br>
-  @color[cyan](@size[1.4em](&larr;) Lab 4)<br>
-  @color[cyan](@size[1.4em](&larr;) Lab 4)<br>&nbsp;&nbsp;
+  @color[#7030a0](@size[1.4em](&larr;) Lab 4)<br>
+  @color[#7030a0](@size[1.4em](&larr;) Lab 4)<br>&nbsp;&nbsp;
   <br>
  <br>
 <br><br><br>&nbsp;
