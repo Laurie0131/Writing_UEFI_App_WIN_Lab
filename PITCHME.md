@@ -1146,7 +1146,7 @@ Note:
 <br>
 <br>
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black"><br>
- SampleApp.c <br><br>
+ <br><br>
 &num;include &lt;Uefi.h&gt; <br>
 &num;include &lt;Library/UefiApplicationEntryPoint.h&gt; <br>
 @color[red](&num;include &lt;Library/UefiLib.h&gt;) <br>
@@ -1158,7 +1158,7 @@ UefiMain ( <br>&nbsp;&nbsp;
   IN EFI_SYSTEM_TABLE  *SystemTable <br>&nbsp;&nbsp;
   ) <br>
 { <br>&nbsp;&nbsp;
-  @color[red](Print(L"System Table: 0x%p\n", SystemTable); ) <br>&nbsp;&nbsp;
+  @color[red](Print&lpar;L"System Table: 0x%p\n", SystemTable&rpar;; ) <br>&nbsp;&nbsp;
   return EFI_SUCCESS; <br>
 } <br>
 </font>
@@ -1172,7 +1172,7 @@ UefiMain ( <br>&nbsp;&nbsp;
 <br>
 <br>
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black"><br>
- SampleApp.inf <br><br>
+ <br><br>
  [LibraryClasses] <br>&nbsp;&nbsp;
   UefiApplicationEntryPoint <br>&nbsp;&nbsp;
   @color[red](UefiLib)
@@ -1237,7 +1237,7 @@ UefiMain (
  Shell> 
 ```
 
-<p style="line-height:70%"><span style="font-size:0.8em" >Verify by using the Shell “<font face="Consolas">mem</font>” command </span></p>
+<p style="line-height:70%"><span style="font-size:0.8em" >Verify by using the Shell "<font face="Consolas">mem</font>" command </span></p>
 <span style="font-size:0.8em" >Exit</span>
 
 ```shell
@@ -1329,7 +1329,36 @@ Note:
 ---?image=/assets/images/slides/Slide42.JPG
 @title[Lab 4 :Update the C File for WaitForKey ]
 <p align="right"><span class="gold" ><b>Lab 4 : Update the C File for <font face="Consolas">WaitForKey</font></b></span></p>
+<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >
+Search the work space and find the following <font face="Consolas">MdePkg/Library/UefiLib/Console.c </font> ~ ln 563:
+</span></p>
+
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black">
+    UINTN                  EventIndex;<br>
+  @color[green](. . . )<br>
+ <br>
+	// If we encounter error, continue to read another key in. <br>
+    //  <br>&nbsp;&nbsp;
+       if (Status != EFI_NOT_READY) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+        continue; <br>
+      } <br>&nbsp;&nbsp;
+      gBS-&gt;WaitForEvent (1, &gST-&gt;ConIn-&gt;WaitForKey, &EventIndex); <br>
+    } <br>
+  @color[green](. . .)	 <br>
+ <br>
+<font face="Arial">
+@size[1.2em]( Add the following to SampleApp.c)
+</font>
 <br>
+ <br>
+ @color[red](UINTN  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EventIndex; ) <br>
+ Print(L"System Table: 0x%p\n",SystemTable);  <br>
+ @color[red](Print&lpar;L"\nPress any Key to continue : \n"&rpar;;) <br>
+ @color[red](gBS-&gt;WaitForEvent &lpar;1, &gST-&gt;ConIn-&gt;WaitForKey, &EventIndex&rpar;; )<br>
+
+<br><br><br>&nbsp;
+</font>
+</span></p>
 
 
 
