@@ -462,6 +462,7 @@ Note:
   <li><span style="font-size:0.7em" >What goes into the Simplest “C”</span></li>
   <li><span style="font-size:0.7em" >Start with what should go into the Simplest .INF file</span></li>
 </ul>  
+<br>
 @snapend
 
 
@@ -513,6 +514,21 @@ Note:
 ---?image=/assets/images/slides/Slide15.JPG
 @title[Lab 2: Application Lab –start with .c and .inf template]
 <p align="right"><span class="gold" ><b>Application Lab –start with .c and .inf template</b></span></p>
+
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Copy the <font face="Consolas">LabSampleCode/SampleApp directory to C:/FW/edk2-ws/edk2</font>
+</span></p>
+
+@snap[south-west span-100]
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+<b>Edit</b> <font face="Consolas">SampleApp.inf</font>
+</span></p>
+<ul style="line-height:0.8;">
+  <li><span style="font-size:0.7em" > Look in the INF for “XXXXXXXXXXX” sections that will need information  </span></li>
+  <li><span style="font-size:0.7em" > Create Name & <font face="Consolas">GUID</font>, and then fill in the <font face="Consolas">MODULE_TYPE</font> </span></li>
+</ul>  
+@snapend
+
 
 Note:
 
