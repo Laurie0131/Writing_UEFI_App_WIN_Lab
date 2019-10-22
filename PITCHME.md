@@ -1854,8 +1854,12 @@ Note:
 ---?image=/assets/images/slides/Slide56.JPG
 @title[Lab 6: With EDK II EADK]
 <p align="right"><span class="gold" ><b>Lab 6: With EDK II EADK</b></span></p>
+<br>
+<br>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
 Write the same application with the same functionality as SampleApp.c using the LibC from the EADK
+<br>
+<br>
 <br>
 <br>
 <br>
