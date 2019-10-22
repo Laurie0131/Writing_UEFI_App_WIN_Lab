@@ -1404,6 +1404,7 @@ Note:
 ---?image=/assets/images/slides/Slide44.JPG
 @title[Lab 4 : Update SampleApp.c for gBS & gST ]
 <p align="right"><span class="gold" ><b>Lab 4 : Update for <font face="Consolas">gBS & gST</font></b></span></p>
+<br>
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black"><br><br>
 &num;include &lt;Uefi.h&gt; <br>
 &num;include &lt;Library/UefiApplicationEntryPoint.h&gt; <br>
@@ -1419,8 +1420,8 @@ UefiMain ( <br>&nbsp;&nbsp;
 {  <br>&nbsp;&nbsp;
   @color[red](UINTN                EventIndex;) <br>&nbsp;&nbsp;
   Print(L"System Table: 0x%p\n“, SystemTable);  <br>&nbsp;&nbsp;
-  @color[red](Print(L"\nPress any Key to  continue :\n"); )<br>&nbsp;&nbsp;
-  @color[red](gBS-&gt;WaitForEvent (1, &amp;gST-&gt;ConIn-&gt;WaitForKey, &amp;EventIndex); )<br>&nbsp;&nbsp;
+  @color[red](Print&lpar;L"\nPress any Key to  continue :\n"&rpar;; )<br>&nbsp;&nbsp;
+  @color[red](gBS-&gt;WaitForEvent &lpar;1, &amp;gST-&gt;ConIn-&gt;WaitForKey, &amp;EventIndex&rpar;; )<br>&nbsp;&nbsp;
   return EFI_SUCCESS;  <br>
 } <br>
 <br><br><br>&nbsp;
