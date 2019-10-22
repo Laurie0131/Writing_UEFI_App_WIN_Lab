@@ -949,14 +949,13 @@ Note:
   C:/FW/edk2-ws/edk2> Build<br> &nbsp;&nbsp;
   C:/FW/edk2-ws/edk2> RunEmulator.bat<br>
 </span></p>
-<br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.7em;" >
 Check the Shell version with “Ver” command <br>
 Build with  the <font face="Consolas">–D ADD_SHELL_STRING</font>
 </span></p>
 
 <p style="line-height:40%" align="left" ><span style="font-size:0.45em; font-family:Consolas;" >
-<font face="Arial"><b>Delete</b> </font>Build/EmulatorX64/DEBUG_@color[cyan](<i>tag</i>)/X64/@color[yellow](ShellPkg)<br>&nbsp;&nbsp;
+<font face="Arial"><b>Delete</b> </font>Build/EmulatorX64/DEBUG_@color[cyan](<i>tag</i>)/X64/@color[yellow](ShellPkg)<br><br>&nbsp;&nbsp;
   C:/FW/edk2-ws/edk2> Build -D Add_SHELL_STRING<br> &nbsp;&nbsp;
   C:/FW/edk2-ws/edk2> RunEmulator.bat<br>
 </span></p>
