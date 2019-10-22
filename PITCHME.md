@@ -321,8 +321,7 @@ Source from Helloworld.c
 ---?image=/assets/images/slides/Slide11.JPG
 @title[EDK II HelloWorld  App  Lab solution]
 <p align="right"><span class="gold" ><b>EDK II HelloWorld  App  Solution </b></span></p>
-<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
-Edit the file <font face="Consolas">C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc</font><br><br>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >1. Edit the file <font face="Consolas">C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc</font><br><br>
 After the section <font face="Consolas">[PcdsFixedAtBuild] </font> (search for “<font face="Consolas">PcdsFixedAtBuild</font>” or “Hello”)
 <br>
 <br>
@@ -336,7 +335,7 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdHelloWorldPrintTimes|3
 </font>
 </span></p>
 
-<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br><br>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br><br>2. 
 Re-Build – Cd to <font face="Consolas">C:/FW/edk2-ws/edk2</font>
 </span></p>
 
@@ -368,9 +367,42 @@ Note:
 @title[EDK II HelloWorld  App  Lab solution 02]
 <p align="right"><span class="gold" ><b>EDK II HelloWorld  App  Solution </b></span></p>
 
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >3. 
+Run Emulation (run WinHost.exe from Build/EmulatorX64/ . . ./X64 )
+</span></p>
+```shell
+  C:/FW/edk2-ws/edk2> RunEmulator.bat
+```
+
+
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >4. 
+At the Shell prompt
+</span></p>
+```shell
+Shell> Helloworld
+UEFI Hello World!
+UEFI Hello World!
+UEFI Hello World!
+Shell> 
+
+```
+
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >5.
+Exit Emulation
+</span></p>
+
+```shell
+Shell> Reset
+```
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
+@color[#A8ff60](How can we change the string of the HelloWorld application?)<br>
+@size[.8em]( Also see  <font face="Consolas">../edk2/MdeModulePkg/MdeModulePkg.Dec</font>)
+
+</span></p>
+
 
 Note:
-3. build Run 
+3. RunEmulator
 
 4. At the Shell prompt
   - `Shell> Helloworld`
