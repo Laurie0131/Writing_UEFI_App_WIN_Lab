@@ -811,7 +811,7 @@ Error on SampleApp.inf
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
 <br><br><br>
-<br><br><br>
+<br><br><br><br>
 The <font face="Consolas">[Packages]</font> was invalid  or did not specify MdePkg/MdePkg.dec properly
 
 </span></p>
@@ -903,21 +903,23 @@ Note:
 @title[Lab 2.1: Build MACRO Switches  ]
 <p align="right"><span class="gold" ><b>Build MACRO Switches </b></span></p>
 
-<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br>
 The build for EmulatorPkg is using build MACRO Switch:<br>
-@color[yellow](-D ADD_SHELL_STRING) – used to change a string in the UEFI Shell application, only used for EDK II Training (requires ShellPkg be re-built on a change of this switch)
+@color[yellow](-D &nbsp;ADD_SHELL_STRING) – used to change a string in the UEFI Shell application, only used for EDK II Training (requires ShellPkg be re-built on a change of this switch)
 </span></p>
-<p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" ><font color="black"><br>
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black"><br><br><br>
 &nbsp; &num; For UEFI / EDK II Training <br>
 &nbsp; &num; This flag is to enable a different ver string for building of the ShellPkg<br>
 &nbsp; &num; These can be changed on the command line.<br>
 &nbsp;   DEFINE ADD_SHELL_STRING      = FALSE 
 </font></span></p>
 
-<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br>
 First delete directory   Build/EmulatorX64/DEBUG_tag/X64/ShellPkg
 <br><br><br>&nbsp;
 </span></p>
+
+Note:
 
 
 
