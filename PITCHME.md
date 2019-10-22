@@ -1368,6 +1368,7 @@ Note:
 
 Add the following "Lab 4" statements to SampleApp.c
 
+<pre>
 ```c
 EFI_STATUS
 EFIAPI
@@ -1387,7 +1388,7 @@ UefiMain (
  gBS->WaitForEvent (1, &gST->ConIn->WaitForKey, &EventIndex);
 
 ```
-
+</pre>
  
 ---?image=/assets/images/slides/Slide43.JPG
 @title[Lab 4 :Test Compile ]
