@@ -550,8 +550,8 @@ Note:
 <br>
 [Defines] <br>
   INF_VERSION &nbsp;&nbsp;     =  0x00010005<br>
-  BASE_NAME   &nbsp;&nbsp;&nbsp;&nbsp;     =  XXXXXXXXXXXXXXX <br>   
-  FILE_GUID   &nbsp;&nbsp;&nbsp;&nbsp;     =  XXXXXXXXXXXXXXX <br>  
+  BASE_NAME   &nbsp;&nbsp;&nbsp;&nbsp;     =  XXXXXXXXXXXXXXX <br>
+  FILE_GUID   &nbsp;&nbsp;&nbsp;&nbsp;     =  XXXXXXXXXXXXXXX <br>
   MODULE_TYPE &nbsp;&nbsp;     =  XXXXXXXXXXXXXX <br>
   VERSION_STRING =  1.0<br>
   ENTRY_POINT  &nbsp;&nbsp;    =  UefiMain<br>
@@ -572,7 +572,9 @@ Note:
 <br>
 <p align="right"><span style="font-size:0.5em">Get a GUID: <a href="http://www.guidgenerator.com/">guidgerator.com</a></span></p>
 
-@snap[north-east span-39 ]
+@snap[north-east span-45 ]
+<br>
+<br>
 <br>
 <br>
 <p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" ><br>
