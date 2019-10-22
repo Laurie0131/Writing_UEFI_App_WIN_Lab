@@ -732,8 +732,8 @@ UefiApplicationEntryPoint
 
 
 SampleApp/SampleApp.c - near the top of the file
-#include <Uefi.h> 
-#include <Library/UefiApplicationEntryPoint.h>
+#include &lt;Uefi.h&gt; 
+#include &lt;Library/UefiApplicationEntryPoint.h&gt;
 
 
 </pre>
