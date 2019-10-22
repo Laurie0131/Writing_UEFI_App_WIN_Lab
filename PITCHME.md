@@ -1623,10 +1623,9 @@ same as slide
 @title[Lab 5 :Typewriter Function Solution]
 <p align="right"><span class="gold" ><b>Lab 5 : Solution</b></span></p>
 
-@snap[north-west span-50 ]
+@snap[north-west span-55 ]
 <br>
-<br>
-<p style="line-height:35%" align="left" ><span style="font-size:0.45em; font-family:Consolas;" ><font color="black">
+<p style="line-height:31%" align="left" ><span style="font-size:0.41em; font-family:Consolas;" ><font color="black"><br>
 &num;include &lt;Uefi.h&gt; <br>
 &num;include &lt;Library/UefiApplicationEntryPoint.h&gt; <br>
 &num;include &lt;Library/UefiLib.h&gt; <br>
@@ -1661,8 +1660,8 @@ UefiMain ( <br>&nbsp;&nbsp;
 @snap[north-east span-45 ]
 <br>
 <br>
-<span style="font-size:0.45em;" >(hint: Lesson B.5 has the solution)<br>
-<p style="line-height:35%" align="left" ><span style="font-size:0.45em; font-family:Consolas;" ><font color="black">
+<span style="font-size:0.45em;" >(hint: Lesson B.5 has the solution)</span)<br>
+<p style="line-height:31%" align="left" ><span style="font-size:0.41em; font-family:Consolas;" ><font color="black">
 // Lab 5  <br>&nbsp;&nbsp;
  Print(L"Enter text. Include a dot ('.') in a \<br>&nbsp;&nbsp;sentence then <Enter> to exit:\n "); //  <br>&nbsp;&nbsp;
  ZeroMem (&Key, sizeof (EFI_INPUT_KEY));  <br>&nbsp;&nbsp;
