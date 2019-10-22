@@ -1098,13 +1098,21 @@ Note:
 ---?image=/assets/images/slides/Slide35.JPG
 @title[Lab 3 : Add System Table Code]
 <p align="right"><span class="gold" ><b>Lab 3 : Add System Table Code</b></span></p>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Add code to print to the console the hex address of the system table pointer
+</span></p>
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.7em;" >  Where is the “print” function? </span></li>
+  <li><span style="font-size:0.7em;" >  Where does the app get the pointer value? @size[.8em](&lpar;compared to mem command below&rpar;) </span></li>
+
+</ul>
 
 Note:
 
 - So let’s extend this and give it something useful to do
  - so for this example we are going to have our sample application print out the system table pointer
 - So how do we do that. Well remember to find a function we want we can use the help documentation or CHM file.so what we will find if we do this is that the print function is part of the UefiLib. So in order to add the print functionality we would need to add the UefiLib  to our list of library classes in our INF file
-- To see this example look in the files in our sample lab code SA3.c and SA3.inf.
+- To see this example look in the files in our sample lab code SampleApp.c and SampleApp.inf
 - So also as an exercise you can look at the file in the sample lab code Min.dsc, this is a platform description file without a platform or any packages that go with it,  and this demonstrates the minimal contents for a DSC file that can build this application. 
 So it will build a single application orientated toward the one we just created except nothing else. So unlike the EmulatorPkg platform description file, if you were to look at it, There are huge amounts of other components, library classes, and all of that, this Min.dsc only does the minimum requirements.
 
@@ -1112,6 +1120,11 @@ So it will build a single application orientated toward the one we just created 
 ---?image=/assets/images/slides/Slide36.JPG
 @title[Locating the “Print” Function ]
 <p align="right"><span class="gold" ><b>Lab 3 : Locating the <font face="Consolas">Print()</font> Function </b></span></p>
+
+1. Search the <font face="Consolas">MdePkg.chm</font> and find that the Print function by clicking on the “<u>I</u>ndex” tab
+2. Type “Print” and double click
+3. Scroll to the top in the right window to see that the print function is in the <font face="Consolas">UefiLib.h</font> file
+
 
 Note:
 
