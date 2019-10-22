@@ -914,7 +914,7 @@ The build for EmulatorPkg is using build MACRO Switch:<br>
 &nbsp;   DEFINE ADD_SHELL_STRING      = FALSE 
 </font></span></p>
 
-<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br><br>
 First delete directory   Build/EmulatorX64/DEBUG_tag/X64/ShellPkg
 <br><br><br>&nbsp;
 </span></p>
