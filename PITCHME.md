@@ -321,7 +321,24 @@ Source from Helloworld.c
 ---?image=/assets/images/slides/Slide11.JPG
 @title[EDK II HelloWorld  App  Lab solution]
 <p align="right"><span class="gold" ><b>EDK II HelloWorld  App  Solution </b></span></p>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Edit the file <font face="Consolas">C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc</font><br>
+After the section <font face="Consolas">[PcdsFixedAtBuild] </font> (search for “<font face="Consolas">PcdsFixedAtBuild</font>” or “Hello”)
+</span></p>
 
+<p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" ><font color="black">
+[PcdsFixedAtBuild]
+gEfiMdeModulePkgTokenSpaceGuid.PcdHelloWorldPrintTimes|3
+</font>
+</span></p>
+
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Re-Build – Cd to <font face="Consolas">C:/FW/edk2-ws/edk2</font>
+</span></p>
+
+```shell
+ $> Build –D ADD_SHELL_STRING
+```
 
 Note:
 
