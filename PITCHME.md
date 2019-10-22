@@ -1432,13 +1432,13 @@ UefiMain ( <br>&nbsp;&nbsp;
 @snapend
 
 
-@snap[north-east span-27]
+@snap[north-east span-22]
 <br><br>
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><font color="black"><br><br><br>
  <br>
  <br>
 <br>
-@color[cyan](@size[1.4em](&larr;) Lab 4) <br>
+@color[#7030a0](@size[1.4em](&larr;) Lab 4) <br>
 <br>
 <br>
  <br>
