@@ -1625,7 +1625,7 @@ same as slide
 
 @snap[north-west span-55 ]
 <br>
-<p style="line-height:31%" align="left" ><span style="font-size:0.41em; font-family:Consolas;" ><font color="black"><br>
+<p style="line-height:28%" align="left" ><span style="font-size:0.38em; font-family:Consolas;" ><font color="black"><br>
 &num;include &lt;Uefi.h&gt; <br>
 &num;include &lt;Library/UefiApplicationEntryPoint.h&gt; <br>
 &num;include &lt;Library/UefiLib.h&gt; <br>
@@ -1660,8 +1660,11 @@ UefiMain ( <br>&nbsp;&nbsp;
 @snap[north-east span-45 ]
 <br>
 <br>
-<span style="font-size:0.45em;" >(hint: Lesson B.5 has the solution)</span)<br>
-<p style="line-height:31%" align="left" ><span style="font-size:0.41em; font-family:Consolas;" ><font color="black">
+<p style="line-height:31%"><span style="font-size:0.45em;" >(hint: Lesson B.5 has the solution)</span)</p>
+<br>
+<br>
+<br>
+<p style="line-height:28%" align="left" ><span style="font-size:0.38em; font-family:Consolas;" ><font color="black">
 // Lab 5  <br>&nbsp;&nbsp;
  Print(L"Enter text. Include a dot ('.') in a \<br>&nbsp;&nbsp;sentence then <Enter> to exit:\n "); //  <br>&nbsp;&nbsp;
  ZeroMem (&Key, sizeof (EFI_INPUT_KEY));  <br>&nbsp;&nbsp;
