@@ -680,24 +680,24 @@ Note:
 ---
 @title[Lab 2: Application Lab – Update Files]
 <p align="right"><span class="gold" ><b>Lab 2: Application Lab – Update Files</b></span></p>
-<ul style="list-style-type:none; line-height:0.9;">
+<ul style="list-style-type:none; line-height:0.95;">
  <li><span style="font-size:0.8em" >1.&nbsp;&nbsp; <font color="yellow" face="Consolas">.DSC </font> (EmulatorPkg/EmulatorPkg.dsc)</span>  </li>
-  <ul style="list-style-type:none; line-height:0.7;">
+  <ul style="list-style-type:none; line-height:0.75;">
      <li><span style="font-size:0.7em" ><font face="Consolas">[Components . . .]</font></span>  </li>
      <li><span style="font-size:0.7em" >&nbsp;&nbsp;Add INF to components section, before build options </span>  </li>
      <li><span style="font-size:0.7em" >&nbsp;&nbsp;Hint: add after comment&nbsp;</span><span style="font-size:0.6em" >"<font color="#8C8C8C"># Add new modules here</font>"</span>
-	  <br><br><span style="font-size:0.7em" > &nbsp;&nbsp;<span style="background-color: #101010">&nbsp;<font face="Consolas">@size[.8em](SampleApp/SampleApp.inf)</font><br> <br>&nbsp;</span> </span> </li>
+	  <br><br><span style="font-size:0.7em" > &nbsp;&nbsp;<span style="background-color: #101010">&nbsp;<font face="Consolas">&nbsp;&nbsp;@size[.8em](SampleApp/SampleApp.inf)&nbsp;&nbsp;</font><br> <br></span> </span> </li>
  </ul>
  <li><span style="font-size:0.8em" >2.&nbsp;&nbsp; <font face="Consolas" color="yellow">.INF</font> file (SampleApp/SampleApp.inf) </span>  </li>
-  <ul style="list-style-type:none; line-height:0.7;">
+  <ul style="list-style-type:none; line-height:0.75;">
      <li><span style="font-size:0.7em" >Packages (all depend on MdePkg)</span>  </li>
-     <li><span style="font-size:0.7em" ><span style="background-color: #101010">&nbsp;&nbsp;<font face="Consolas">@size[.8em]([Packages]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MdePkg/MdePkg.dec)</font> </span> </span> </li>
-     <li><span style="font-size:0.7em" ><span style="background-color: #101010">&nbsp;&nbsp;<font face="Consolas">@size[.8em]([LibraryClasses]&nbsp;&nbsp;UefiApplicationEntryPoint)</font></span><br> <br>&nbsp; </span><br> </li>
+     <li><span style="font-size:0.7em" ><span style="background-color: #101010">&nbsp;&nbsp;<font face="Consolas">@size[.8em]([Packages]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MdePkg/MdePkg.dec)&nbsp;&nbsp;&nbsp;</font> </span> </span> </li>
+     <li><span style="font-size:0.7em" ><span style="background-color: #101010">&nbsp;&nbsp;<font face="Consolas">@size[.8em]([LibraryClasses]&nbsp;&nbsp;UefiApplicationEntryPoint)&nbsp;&nbsp;</font></span><br> <br>&nbsp; </span><br> </li>
  </ul>
  <li><span style="font-size:0.8em" >3.&nbsp;&nbsp; <font face="Consolas" color="yellow">.C </font> file - Header references File (SampleApp/SampleApp.c) </span>  </li>
-  <ul style="list-style-type:none; line-height:0.7;">
-     <li><span style="font-size:0.7em" ><span style="background-color: #101010"><font face="Consolas">@size[.8em](&num;include &lt;Uefi.h&gt;)</font></span> </span> </li>
-     <li><span style="font-size:0.7em" ><span style="background-color: #101010"><font face="Consolas">@size[.8em](&num;include &lt;Library/UefiApplicationEntryPoint.h&gt;)</font></span></span>  </li>
+  <ul style="list-style-type:none; line-height:0.75;">
+     <li><span style="font-size:0.7em" ><span style="background-color: #101010"><font face="Consolas">@size[.8em](&num;include &lt;Uefi.h&gt;)&nbsp;&nbsp;</font></span> </span> </li>
+     <li><span style="font-size:0.7em" ><span style="background-color: #101010"><font face="Consolas">@size[.8em](&num;include &lt;Library/UefiApplicationEntryPoint.h&gt;)&nbsp;&nbsp;</font></span></span>  </li>
  </ul>
 </ul>
 
