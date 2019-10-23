@@ -1922,7 +1922,7 @@ SampleCApp.c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       </font> and 
 <br>
 <br>
 <br>
-<p style="line-height:35%" align="left" ><span style="font-size:0.42em; font-family:Consolas;" ><font color="black"><br>
+<p style="line-height:35%" align="left" ><span style="font-size:0.42em; font-family:Consolas;" ><font color="black"><br><br>
 &num;include &lt;stdio.h&gt; <br>
    // . . . <br>
    int <br>
@@ -1943,14 +1943,14 @@ SampleCApp.c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       </font> and 
 <br>
 <br>
 <br>
-<p style="line-height:35%" align="left" ><span style="font-size:0.42em; font-family:Consolas;" ><font color="black"><br>
+<p style="line-height:35%" align="left" ><span style="font-size:0.42em; font-family:Consolas;" ><font color="black"><br><br>
 [Defines] <br>&nbsp;&nbsp;
   INF_VERSION &nbsp;&nbsp;       = 1.25 <br>&nbsp;&nbsp;
   BASE_NAME  &nbsp;&nbsp;&nbsp;&nbsp;        = SampleCApp <br>&nbsp;&nbsp;
   FILE_GUID  &nbsp;&nbsp;&nbsp;&nbsp;        = 4ea9… <br>&nbsp;&nbsp;
-  MODULE_TYPE &nbsp;&nbsp;&nbsp;       = UEFI_APPLICATION <br>&nbsp;&nbsp;
+  MODULE_TYPE &nbsp;&nbsp;       = UEFI_APPLICATION <br>&nbsp;&nbsp;
   VERSION_STRING     = 0.1 <br>&nbsp;&nbsp;
-  ENTRY_POINT &nbsp;&nbsp;&nbsp;       = ShellCEntryLib <br>
+  ENTRY_POINT &nbsp;&nbsp;       = ShellCEntryLib <br>
  <br>
 [Sources] <br>&nbsp;&nbsp;
   SampleCApp.c <br>
