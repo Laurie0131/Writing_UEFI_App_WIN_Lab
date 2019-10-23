@@ -1912,20 +1912,63 @@ Note:
 ---?image=/assets/images/slides/Slide58.JPG
 @title[Lab 6: EDK II using EADK 02]
 <p align="right"><span class="gold" ><b>Lab 6: EDK II using EADK</b></span></p>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Check out <font face="Consolas">AppPkg/Applications/SampleCApp<br>
+SampleCApp.c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       </font> and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="Consolas">SampleCApp.inf</font>
+</span></p>
+
+@snap[north-west span-50 ]
 <br>
+<br>
+<p style="line-height:35%" align="left" ><span style="font-size:0.42em; font-family:Consolas;" ><font color="black"><br>
+&num;include &lt;stdio.h&gt; <br>
+   // . . . <br>
+   int <br>
+   main ( <br>&nbsp;&nbsp;
+     IN int Argc, <br>&nbsp;&nbsp;
+     IN char **Argv <br>
+   ) <br>
+   { <br>&nbsp;&nbsp;
+      return 0; <br>
+   } <br>
+</font>   
+</span></p>
+@snapend
+
+
+@snap[north-east span-49 ]
+<br>
+<br>
+<p style="line-height:35%" align="left" ><span style="font-size:0.42em; font-family:Consolas;" ><font color="black"><br>
+[Defines] <br>&nbsp;&nbsp;
+  INF_VERSION        = 1.25 <br>&nbsp;&nbsp;
+  BASE_NAME          = SampleCApp <br>&nbsp;&nbsp;
+  FILE_GUID          = 4ea9… <br>&nbsp;&nbsp;
+  MODULE_TYPE        = UEFI_APPLICATION <br>&nbsp;&nbsp;
+  VERSION_STRING     = 0.1 <br>&nbsp;&nbsp;
+  ENTRY_POINT        = ShellCEntryLib <br>
+ <br>
+[Sources] <br>&nbsp;&nbsp;
+  SampleCApp.c <br>
+ <br>
+[Packages] <br>&nbsp;&nbsp;
+  StdLib/StdLib.dec <br>&nbsp;&nbsp;
+  MdePkg/MdePkg.dec <br>&nbsp;&nbsp;
+  ShellPkg/ShellPkg.dec <br>
+ <br>
+[LibraryClasses] <br>&nbsp;&nbsp;
+  LibC <br>&nbsp;&nbsp;
+  LibStdio <br>
+
+</font>   
+</span></p>
+@snapend
 
 Note:
 
 - EDK II using EADK
 - Check out AppPkg/Applications/SampleCApp
 
-+++
-@title[Lab 6: EDK II using EADK 02-1]
-<p align="right"><span class="gold" ><b>Lab 6: EDK II using EADK</b></span></p>
-<span style="font-size:0.9em"  >SampleCApp.c and SampleCApp.inf </span>
-
-<div class="left">
-<span style="font-size:0.8em" ><font color="cyan">“C” file</font></span>
 <pre>
 ```
 #include <stdio.h>
@@ -1939,11 +1982,7 @@ Note:
       return 0;
    }
 ```
-</pre>
-</div>
-<div class="right1">
-<span style="font-size:0.8em" ><font color="yellow">.inf file</font></span>
-<pre>
+
 ```
 [Defines]
   INF_VERSION    = 1.25
@@ -1966,7 +2005,6 @@ Note:
   LibStdio
 ```
 </pre>
-</div>
 
 Note:
 
