@@ -2117,7 +2117,20 @@ Note:
 <p align="right"><span class="gold" >@size[1.0em](<b>Lab 7: Solution  </b>)</span><br>
 <span style="font-size:0.75em;" > SampleCApp.c and SampleCApp.inf &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-@snap[north-west span-50 ]
+
+@snap[north-west span-53 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-50 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-46 ]
 <br>
 <br>
 
@@ -2152,7 +2165,7 @@ Note:
 @snapend
 
 
-@snap[north-east span-46 ]
+@snap[north-east span-44 ]
 <br>
 <br>
 <p style="line-height:32%" align="left" ><span style="font-size:0.42em; font-family:Consolas;" >
