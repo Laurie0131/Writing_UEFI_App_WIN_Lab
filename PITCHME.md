@@ -2120,11 +2120,10 @@ Note:
 @snap[north-west span-50 ]
 <br>
 <br>
+
+<p style="line-height:32%" align="left" ><span style="font-size:0.42em; font-family:Consolas;" >
+<font color="cyan">@size[1.3em](“C” file)</font>
 <br>
-<br>
-<p style="line-height:35%" align="left" ><span style="font-size:0.42em; font-family:Consolas;" >
-<font color="cyan">“C” file</font>
-<br><br>
 &num;include &lt;stdio.h&gt; <br>
    // . . . <br>
    int <br>
@@ -2141,9 +2140,9 @@ Note:
    c=(char)getchar(); <br>
   <br>
 // Lab 5 <br>&nbsp;&nbsp;
-   puts ("Enter text. Include a dot ('.') in a sentence then <Enter> to exit:"); <br>&nbsp;&nbsp;
+   puts ("Enter text. Include a dot ('.') in a <br>&nbsp;&nbsp;&nbsp;&nbsp;sentence then <Enter> to exit:"); <br>&nbsp;&nbsp;
    do { <br>&nbsp;&nbsp;&nbsp;&nbsp;
-      c=(char)getchar(); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+      c=(char)getchar(); <br>&nbsp;&nbsp;
      } while (c != '.'); <br>&nbsp;&nbsp;
    puts ("\n"); <br>&nbsp;&nbsp;
    return 0; <br>
@@ -2156,11 +2155,9 @@ Note:
 @snap[north-east span-46 ]
 <br>
 <br>
+<p style="line-height:32%" align="left" ><span style="font-size:0.42em; font-family:Consolas;" >
+<font color="yellow">@size[1.3em](.inf file)</font>
 <br>
-<br>
-<p style="line-height:35%" align="left" ><span style="font-size:0.42em; font-family:Consolas;" >
-<font color="yellow">.inf file</font>
-<br><br>
 [Defines] <br>&nbsp;&nbsp;
   INF_VERSION &nbsp;&nbsp;       = 1.25 <br>&nbsp;&nbsp;
   BASE_NAME  &nbsp;&nbsp;&nbsp;&nbsp;        = SampleCApp <br>&nbsp;&nbsp;
