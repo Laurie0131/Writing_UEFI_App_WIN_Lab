@@ -2046,7 +2046,7 @@ Note:
 ```
 <span style="font-size:0.8em" >Copy the built application to the EmulatorPkg runtime directory</span>
 ```shell
-  C:/FW/edk2-ws/edk2> copy Build\AppPkg\DEBUG_VS2015x86\X64\SampleCApp.efi  Build\EmulatorX64\DEBUG_VS2015x86\X64
+  C:/FW/edk2-ws/edk2> copy ..\Build\AppPkg\DEBUG_VS2015x86\X64\SampleCApp.efi  ..\Build\EmulatorX64\DEBUG_VS2015x86\X64
 ```
 <span style="font-size:0.8em" >Run the Emulation</span>
 ```shell
@@ -2211,7 +2211,7 @@ Note:
 ```
 <span style="font-size:0.8em" >Copy the built application to the EmulatorPkg runtime directory</span>
 ```shell
-  C:/FW/edk2-ws/edk2> copy Build\AppPkg\DEBUG_VS2015x86\X64\SampleCApp.efi  Build\EmulatorX64\DEBUG_VS2015x86\X64
+  C:/FW/edk2-ws/edk2> copy ..\Build\AppPkg\DEBUG_VS2015x86\X64\SampleCApp.efi  ..\Build\EmulatorX64\DEBUG_VS2015x86\X64
 ```
 <span style="font-size:0.8em" >Run the Emulation</span>
 ```shell
