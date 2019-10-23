@@ -2112,10 +2112,10 @@ Note:
 
 Note:
 
-+++
+---
 @title[Lab 7: With EDK II EADK solution]
-<p align="right"><span class="gold" ><b>Lab 7: Solution</b></span></p>
-<span style="font-size:0.9em"  >SampleCApp.c and SampleCApp.inf </span>
+<p align="right"><span class="gold" >@size[1.0em](<b>Lab 7: Solution  </b>)</span><br>
+<span style="font-size:0.75em;" > SampleCApp.c and SampleCApp.inf &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
 @snap[north-west span-50 ]
 <br>
