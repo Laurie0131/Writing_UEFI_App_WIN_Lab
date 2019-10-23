@@ -1920,6 +1920,7 @@ SampleCApp.c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       </font> and 
 @snap[north-west span-50 ]
 <br>
 <br>
+<br>
 <p style="line-height:35%" align="left" ><span style="font-size:0.42em; font-family:Consolas;" ><font color="black"><br>
 &num;include &lt;stdio.h&gt; <br>
    // . . . <br>
@@ -1937,6 +1938,7 @@ SampleCApp.c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       </font> and 
 
 
 @snap[north-east span-49 ]
+<br>
 <br>
 <br>
 <p style="line-height:35%" align="left" ><span style="font-size:0.42em; font-family:Consolas;" ><font color="black"><br>
@@ -1981,9 +1983,7 @@ Note:
    {
       return 0;
    }
-```
 
-```
 [Defines]
   INF_VERSION    = 1.25
   BASE_NAME      = SampleCApp
@@ -2006,7 +2006,7 @@ Note:
 ```
 </pre>
 
-Note:
+
 
 
 
