@@ -1938,7 +1938,7 @@ SampleCApp.c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       </font> and 
 @snapend
 
 
-@snap[north-east span-49 ]
+@snap[north-east span-46 ]
 <br>
 <br>
 <br>
@@ -2057,7 +2057,7 @@ Note:
  Shell> SampleCApp
  Shell>
 ```
-<span style="font-size:0.7em" >Notice that the program will immediately unload because the main function is empty</span>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >Notice that the program will immediately unload because the main function is empty</span></p>
 
 Note:
 
@@ -2117,63 +2117,73 @@ Note:
 <p align="right"><span class="gold" ><b>Lab 7: Solution</b></span></p>
 <span style="font-size:0.9em"  >SampleCApp.c and SampleCApp.inf </span>
 
-<div class="left">
-<span style="font-size:0.8em" ><font color="cyan">“C” file</font></span>
-<pre>
-```
-#include <stdio.h>
-#include <Library/UefiBootServicesTableLib.h>
-int
-main (
-  IN int Argc,
-  IN char **Argv
-  )
-{
-   char c;
-// Lab 3
-   printf("System Table: %p \n", gST) ; 
-// Lab 4
-   puts("Press any Key and then <Enter> to continue :  ");
-   c=(char)getchar();
- 
-// Lab 5
-   puts ("Enter text. Include a dot ('.') in a sentence then <Enter> to exit:");
-   do {
-      c=(char)getchar();
-     } while (c != '.');
-   puts ("\n");
-   return 0;
-}
-```
-</pre>
-</div>
-<div class="right1">
-<span style="font-size:0.8em" ><font color="yellow">.inf file</font></span>
-<pre>
-```
-[Defines]
-  INF_VERSION    = 1.25
-  BASE_NAME      = SampleCApp
-  FILE_GUID      = 54321…
-  MODULE_TYPE    = UEFI_APPLICATION
-  VERSION_STRING = 0.1
-  ENTRY_POINT    = ShellCEntryLib
+@snap[north-west span-50 ]
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:35%" align="left" ><span style="font-size:0.42em; font-family:Consolas;" >
+<font color="cyan">“C” file</font>
+<br><br>
+&num;include &lt;stdio.h&gt; <br>
+   // . . . <br>
+   int <br>
+   main ( <br>&nbsp;&nbsp;
+     IN int Argc, <br>&nbsp;&nbsp;
+     IN char **Argv <br>
+   ) <br>
+   { <br>&nbsp;&nbsp;
+   char c; <br>
+// Lab 3 <br>&nbsp;&nbsp;
+   printf("System Table: %p \n", gST) ;  <br>
+// Lab 4 <br>&nbsp;&nbsp;
+   puts("Press any Key and then <Enter> to continue :  "); <br>&nbsp;&nbsp;
+   c=(char)getchar(); <br>
+  <br>
+// Lab 5 <br>&nbsp;&nbsp;
+   puts ("Enter text. Include a dot ('.') in a sentence then <Enter> to exit:"); <br>&nbsp;&nbsp;
+   do { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+      c=(char)getchar(); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+     } while (c != '.'); <br>&nbsp;&nbsp;
+   puts ("\n"); <br>&nbsp;&nbsp;
+   return 0; <br>
+} <br>
 
-[Sources]
-  SampleCApp.c
+</span></p>
+@snapend
 
-[Packages]
-  StdLib/StdLib.dec
-  MdePkg/MdePkg.dec
-  ShellPkg/ShellPkg.dec
 
-[LibraryClasses]
-  LibC
-  LibStdio
-  UefiBootServicesTableLib
-```
-</pre>
-</div>
+@snap[north-east span-46 ]
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:35%" align="left" ><span style="font-size:0.42em; font-family:Consolas;" >
+<font color="yellow">.inf file</font>
+<br><br>
+[Defines] <br>&nbsp;&nbsp;
+  INF_VERSION &nbsp;&nbsp;       = 1.25 <br>&nbsp;&nbsp;
+  BASE_NAME  &nbsp;&nbsp;&nbsp;&nbsp;        = SampleCApp <br>&nbsp;&nbsp;
+  FILE_GUID  &nbsp;&nbsp;&nbsp;&nbsp;        = 4ea9… <br>&nbsp;&nbsp;
+  MODULE_TYPE &nbsp;&nbsp;       = UEFI_APPLICATION <br>&nbsp;&nbsp;
+  VERSION_STRING     = 0.1 <br>&nbsp;&nbsp;
+  ENTRY_POINT &nbsp;&nbsp;       = ShellCEntryLib <br>
+ <br>
+[Sources] <br>&nbsp;&nbsp;
+  SampleCApp.c <br>
+ <br>
+[Packages] <br>&nbsp;&nbsp;
+  StdLib/StdLib.dec <br>&nbsp;&nbsp;
+  MdePkg/MdePkg.dec <br>&nbsp;&nbsp;
+  ShellPkg/ShellPkg.dec <br>
+ <br>
+[LibraryClasses] <br>&nbsp;&nbsp;
+  LibC <br>&nbsp;&nbsp;
+  LibStdio <br>&nbsp;&nbsp;
+ UefiBootServicesTableLib
+</span></p>
+@snapend
+
 
 Note:
 
