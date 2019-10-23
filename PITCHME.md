@@ -1914,10 +1914,11 @@ Note:
 <p align="right"><span class="gold" ><b>Lab 6: EDK II using EADK</b></span></p>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
 Check out <font face="Consolas">AppPkg/Applications/SampleCApp<br>
-SampleCApp.c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       </font> and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="Consolas">SampleCApp.inf</font>
+SampleCApp.c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       </font> and  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="Consolas">SampleCApp.inf</font>
 </span></p>
 
 @snap[north-west span-50 ]
+<br>
 <br>
 <br>
 <br>
@@ -1941,14 +1942,15 @@ SampleCApp.c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       </font> and 
 <br>
 <br>
 <br>
+<br>
 <p style="line-height:35%" align="left" ><span style="font-size:0.42em; font-family:Consolas;" ><font color="black"><br>
 [Defines] <br>&nbsp;&nbsp;
-  INF_VERSION        = 1.25 <br>&nbsp;&nbsp;
-  BASE_NAME          = SampleCApp <br>&nbsp;&nbsp;
-  FILE_GUID          = 4ea9… <br>&nbsp;&nbsp;
-  MODULE_TYPE        = UEFI_APPLICATION <br>&nbsp;&nbsp;
+  INF_VERSION &nbsp;&nbsp;       = 1.25 <br>&nbsp;&nbsp;
+  BASE_NAME  &nbsp;&nbsp;&nbsp;&nbsp;        = SampleCApp <br>&nbsp;&nbsp;
+  FILE_GUID  &nbsp;&nbsp;&nbsp;&nbsp;        = 4ea9… <br>&nbsp;&nbsp;
+  MODULE_TYPE &nbsp;&nbsp;&nbsp;       = UEFI_APPLICATION <br>&nbsp;&nbsp;
   VERSION_STRING     = 0.1 <br>&nbsp;&nbsp;
-  ENTRY_POINT        = ShellCEntryLib <br>
+  ENTRY_POINT &nbsp;&nbsp;&nbsp;       = ShellCEntryLib <br>
  <br>
 [Sources] <br>&nbsp;&nbsp;
   SampleCApp.c <br>
