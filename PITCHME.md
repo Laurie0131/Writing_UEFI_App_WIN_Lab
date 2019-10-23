@@ -2055,12 +2055,10 @@ Note:
 <span style="font-size:0.8em" >Run the application SampleCapp from the shell</span>
 ```shell
  Shell> SampleCApp
- Shell>
 ```
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >Notice that the program will immediately unload because the main function is empty</span></p>
 
 Note:
-
 
 ---?image=/assets/images/slides/Slide_LabSec.JPG
 @title[Lab 7: Adding Functionality to SampleCApp]
