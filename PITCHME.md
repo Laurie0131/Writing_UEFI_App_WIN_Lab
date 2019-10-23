@@ -2124,13 +2124,13 @@ Note:
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
-@snap[north-east span-50 ]
+@snap[north-east span-46 ]
 <br>
 <br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
-@snap[north-west span-46 ]
+@snap[north-east span-98 ]
 <br>
 <br>
 
@@ -2153,7 +2153,7 @@ Note:
    c=(char)getchar(); <br>
   <br>
 // Lab 5 <br>&nbsp;&nbsp;
-   puts ("Enter text. Include a dot ('.') in a <br>&nbsp;&nbsp;&nbsp;&nbsp;sentence then <Enter> to exit:"); <br>&nbsp;&nbsp;
+   puts ("Enter text. Include a dot ('.') <br>&nbsp;&nbsp;&nbsp;&nbsp;in a sentence then <Enter> to exit:"); <br>&nbsp;&nbsp;
    do { <br>&nbsp;&nbsp;&nbsp;&nbsp;
       c=(char)getchar(); <br>&nbsp;&nbsp;
      } while (c != '.'); <br>&nbsp;&nbsp;
