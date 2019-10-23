@@ -10,12 +10,12 @@ https://gitpitch.com/tianocore-training/Writing_UEFI_App_Win_Lab/master#/
 <span style="font-size:0.8em" >with Windows Labs</span>
 <br>
 <span style="font-size:0.75em" ><a href='http://www.tianocore.org'>tianocore.org</a></span><br>
-<span style="font-size:0.5em" >See also <a href="https://github.com/Laurie0131/Writing_UEFI_App_WIN_Lab/blob/master/LabGuide.md">LabGuide.md</a> for Copy&Paste examples in labs</span>
+<span style="font-size:0.5em" >See also <a href="https://github.com/tianocore-training/Writing_UEFI_App_WIN_Lab/blob/master/LabGuide.md">LabGuide.md</a> for Copy&Paste examples in labs</span>
 
 Note:
   PITCHME.md for UEFI / EDK II Training  How to Write a UEFI Application Lab
 
-  Copyright (c) 2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -230,7 +230,7 @@ Note:
 - So the steps for getting the source code, hopefully everyone did this prior to this training because it does take some time to download.
 - So here are the steps:
 
-- First create a directory, and for our example case we are using the directory “~src/Fw”
+- First create a directory, and for our example case we are using the directory "~src/Fw"
 
 - Use instructions on wiki here: https://github.com/tianocore/tianocore.github.io/wiki/UDK2018-How-to-Build or use the lab material edk2 
 
@@ -322,7 +322,7 @@ Source from Helloworld.c
 @title[EDK II HelloWorld  App  Lab solution]
 <p align="right"><span class="gold" ><b>EDK II HelloWorld  App  Solution </b></span></p>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >1. Edit the file <font face="Consolas">C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc</font><br><br>
-After the section <font face="Consolas">[PcdsFixedAtBuild] </font> (search for “<font face="Consolas">PcdsFixedAtBuild</font>” or “Hello”)
+After the section <font face="Consolas">[PcdsFixedAtBuild] </font> (search for "<font face="Consolas">PcdsFixedAtBuild</font>" or "Hello")
 <br>
 <br>
 <br>
@@ -443,7 +443,7 @@ Note:
 <br>
 <br>
 <br>
-<p style="line-height:45%" align="left" ><span style="font-size:0.9em" ><font color="cyan">“C” file</font></span></p>
+<p style="line-height:45%" align="left" ><span style="font-size:0.9em" ><font color="cyan">"C" file</font></span></p>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:59% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
@@ -459,7 +459,7 @@ Note:
 
 @snap[south-west span-95 fragment ]
 <ul style="line-height:0.8;">
-  <li><span style="font-size:0.7em" >What goes into the Simplest “C”</span></li>
+  <li><span style="font-size:0.7em" >What goes into the Simplest "C"</span></li>
   <li><span style="font-size:0.7em" >Start with what should go into the Simplest .INF file</span></li>
 </ul>  
 <br>
@@ -508,7 +508,7 @@ UefiMain ( <br>
 Note:
 
 - Start with what should go into the Simplest .INF file
-- What goes into a Simplest “C”
+- What goes into a Simplest "C"
 
 
 ---?image=/assets/images/slides/Slide15.JPG
@@ -524,7 +524,7 @@ Copy the <font face="Consolas">LabSampleCode/SampleApp directory to C:/FW/edk2-w
 <b>Edit</b> <font face="Consolas">SampleApp.inf</font>
 </span></p>
 <ul style="line-height:0.8;">
-  <li><span style="font-size:0.7em" > Look in the INF for “XXXXXXXXXXX” sections that will need information  </span></li>
+  <li><span style="font-size:0.7em" > Look in the INF for "XXXXXXXXXXX" sections that will need information  </span></li>
   <li><span style="font-size:0.7em" > Create <font face="Consolas">Name & GUID</font>, and then fill in the <font face="Consolas">MODULE_TYPE</font> </span></li>
 </ul>  
 <br>
@@ -537,7 +537,7 @@ Note:
 ##### Steps
 1. Copy the LabSampleCode/SampleApp directory to FW/edk2
 2. Edit SampleApp.inf
-  - Look in the INF for “XXXXXXXXXXX” sections that will need information  
+  - Look in the INF for "XXXXXXXXXXX" sections that will need information  
   - Create Name & GUID, and then fill in the MODULE_TYPE 
 
 
@@ -705,10 +705,10 @@ Note:
 Note:
 
 - So what are our steps for adding that
-- So first we need to add the MDE package to the INF file and you need to reference the file by the DEC file so under the [packages] section you Are going to add “MdePkg/MdePkg.dec” 
-- Under the [LibraryClasses] section of the INF you’re going to add a reference to “UefiApplicationsEntryPoint” . And just as an interesting note is actually dependent on the “UefiBootServiecesTableLib”.
-- Next in the .C. file you are going to add some header references, the “Uefi.h” and “Library/UefiApplicationEntryPoint.h”  
-- Then in the DSC file under the “[components]” section you’re going to add a reference to your new sample INF file.
+- So first we need to add the MDE package to the INF file and you need to reference the file by the DEC file so under the [packages] section you Are going to add "MdePkg/MdePkg.dec" 
+- Under the [LibraryClasses] section of the INF you’re going to add a reference to "UefiApplicationsEntryPoint" . And just as an interesting note is actually dependent on the "UefiBootServiecesTableLib".
+- Next in the .C. file you are going to add some header references, the "Uefi.h" and "Library/UefiApplicationEntryPoint.h"  
+- Then in the DSC file under the "[components]" section you’re going to add a reference to your new sample INF file.
 
 
 ---?image=/assets/images/slides/Slide20.JPG
@@ -787,12 +787,12 @@ Error on SampleApp.inf
 <br><br><br>
 <br><br><br>
 <br><br><br>
-The FILE_GUID was invalid or not updated from “XXX…” to a proper formatted GUID
+The FILE_GUID was invalid or not updated from "XXX…" to a proper formatted GUID
 
 </span></p>
 
 Note:
-The <font face="Consolas">FILE_GUID</font> was invalid or not updated from “<font face="Consolas">XXX…</font>” to a proper formatted GUID
+The <font face="Consolas">FILE_GUID</font> was invalid or not updated from "<font face="Consolas">XXX…</font>" to a proper formatted GUID
 - left is no FILE_GUID
 - right - left the "XXXX" 
 
@@ -833,12 +833,12 @@ Compiler Error on SampleApp.c
 <br><br><br>&nbsp;
 <br><br><br>
 <br><br><br>
-The <font face="Consolas">#include &lt;Library/UefiApplicationEntryPoint.h&gt;</font>  has a typo (“Application” not “Applications”)
+The <font face="Consolas">#include &lt;Library/UefiApplicationEntryPoint.h&gt;</font>  has a typo ("Application" not "Applications")
 
 </span></p>
 
 Note:
-- The `#include <Library/UefiApplicationEntryPoint.h>`  has a typo (“Application” not “Applications”)
+- The `#include <Library/UefiApplicationEntryPoint.h>`  has a typo ("Application" not "Applications")
 
 
 
@@ -951,7 +951,7 @@ Note:
   C:/FW/edk2-ws/edk2> RunEmulator.bat<br><br>
 </span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.7em;" >
-Check the Shell version with “Ver” command <br>
+Check the Shell version with "Ver" command <br>
 Build with  the <font face="Consolas">–D ADD_SHELL_STRING</font>
 </span></p>
 
@@ -962,7 +962,7 @@ Build with  the <font face="Consolas">–D ADD_SHELL_STRING</font>
 </span></p>
 
 <p style="line-height:70%" align="left" ><span style="font-size:0.7em;" >
-Check the Shell version with “Ver” command <br>
+Check the Shell version with "Ver" command <br>
 </span></p>
 @snapend
 
@@ -1010,7 +1010,7 @@ Re-Build – Cd to <font face="Consolas">/FW/edk2-ws/edk2<br>&nbsp;&nbsp;
    @size[.7em](C:/FW/edk2-ws/edk2> RunEmulator.bat)<br><br>
 </font>
 <br><br><br>
-Check the Shell version with “<font face="Consolas">Ver</font>”  command 
+Check the Shell version with "<font face="Consolas">Ver</font>"  command 
 </span></p>
 @snapend
 
@@ -1102,7 +1102,7 @@ Note:
 Add code to print to the console the hex address of the system table pointer
 </span></p>
 <ul style="list-style-type:disc; line-height:0.7;">
-  <li><span style="font-size:0.7em;" >  Where is the “print” function? </span></li>
+  <li><span style="font-size:0.7em;" >  Where is the "print" function? </span></li>
   <li><span style="font-size:0.7em;" >  Where does the app get the pointer value? @size[.8em](&lpar;compared to mem command below&rpar;) </span></li>
 
 </ul>
@@ -1130,8 +1130,8 @@ So it will build a single application orientated toward the one we just created 
 Note:
 
 - "MdePkg Document With Libraries.chm" located in ... Lab_Material_FW/FW/Documentation
-1. Search the MdePkg.chm and find that the Print function by clicking on the “Index” tab
-2. Type “Print” and double click
+1. Search the MdePkg.chm and find that the Print function by clicking on the "Index" tab
+2. Type "Print" and double click
 3. Scroll to the top in the right window to see that the print function is in the UefiLib.h file
 - * NOTE -:  Install a CHM Viewer for Ubuntu
 - bash$ sudo aptitude install kchmviewer
@@ -1286,9 +1286,9 @@ Note:
 
 - Add code to make your application wait for an event (WaitForEvent) and use the (WaitForKey) as the event
 
-- Hint: use the MdePkg.chm to find where the “WaitForEvent” and the “WaitForKey” functions are located
+- Hint: use the MdePkg.chm to find where the "WaitForEvent" and the "WaitForKey" functions are located
 - Another Hint: The system table is passed in as a parameter to your sample application
-- Search the EDK II code for “WaitForEvent” 
+- Search the EDK II code for "WaitForEvent" 
 - Test by running your application in the Shell
 
 ---
@@ -1316,8 +1316,8 @@ Note:
 
 Note:
 
-1. Search the MdePkg.chm and find where the “WaitForEvent” is located.  It is part of the “Boot Services”.
-2. Search the MdePkg.chm and find where the “WaitForKey” is located.  It is part of the “EFI_SIMPLE_TEXT_INPUT_PROTOCOL as part of ConIn.
+1. Search the MdePkg.chm and find where the "WaitForEvent" is located.  It is part of the "Boot Services".
+2. Search the MdePkg.chm and find where the "WaitForKey" is located.  It is part of the "EFI_SIMPLE_TEXT_INPUT_PROTOCOL as part of ConIn.
 3. The WaitForEvent can be referenced through the Boot Services pointer which can be referenced through the System Table
 4. The WaitForKey can be referenced through the System Table passed into our Sample application
 5. Check the UEFI Spec for the parameters needed
@@ -1379,7 +1379,7 @@ However, this won’t compile . . . <font face="Consolas">gBS and gST </font> ar
 @snap[south-west span-100]
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" >
 <font face="Arial">
-<b>Search</b> the </font>MdePkg.chm for “gBS” and “gST”<font face="Arial"> – they are located in</font> UefiBootServicesTableLib.h<br>
+<b>Search</b> the </font>MdePkg.chm for "gBS" and "gST"<font face="Arial"> – they are located in</font> UefiBootServicesTableLib.h<br>
 <br>
 <font face="Arial">
 <b>Add</b> the boot services lib to</font> SampleApp.c . . .<br>
@@ -1393,7 +1393,7 @@ However, this won’t compile . . . <font face="Consolas">gBS and gST </font> ar
 Note:
 - However, this won’t compile … gBS and gST are not defined.
 
-- Search the MdePkg.chm for “gBS” and “gST” – they are located in UefiBootServicesTableLib.h
+- Search the MdePkg.chm for "gBS" and "gST" – they are located in UefiBootServicesTableLib.h
 
   - Add the boot services lib to SampleApp.c …
   - #include <Library/UefiBootServicesTableLib.h>
@@ -1421,7 +1421,7 @@ UefiMain ( <br>&nbsp;&nbsp;
   ) <br>
 {  <br>&nbsp;&nbsp;
   @color[red](UINTN                EventIndex;)<br>&nbsp;&nbsp;
-  Print(L"System Table: 0x%p\n“, SystemTable);  <br>&nbsp;&nbsp;
+  Print(L"System Table: 0x%p\n", SystemTable);  <br>&nbsp;&nbsp;
   @color[red](Print&lpar;L"\nPress any Key to  continue :\n"&rpar;; )<br>&nbsp;&nbsp;
   @color[red](gBS-&gt;WaitForEvent &lpar;1, &amp;gST-&gt;ConIn-&gt;WaitForKey, &amp;EventIndex&rpar;; )<br>&nbsp;&nbsp;
   return EFI_SUCCESS;  <br>
@@ -1554,7 +1554,7 @@ Note:
 <ul style="line-height:0.8;">
   <li><span style="font-size:0.8em" >Retrieve keys entered from keyboard (<i>Like</i> Lab 4)</span>  </li>
   <li><span style="font-size:0.8em" >Print back each key entered to the console</span>  </li>
-  <li><span style="font-size:0.8em" >To Exit, press  “.” (DOT) and  then &lt;Enter&gt; </span>  </li>
+  <li><span style="font-size:0.8em" >To Exit, press  "." (DOT) and  then &lt;Enter&gt; </span>  </li>
 </ul>
 </div>
 <div class="right1">
@@ -1580,7 +1580,7 @@ Same as Slide
   <li><span style="font-size:0.7em" >Add a Loop using <font face="Consolas">WaitForEvent with WaitForKey</font></span> </li>
   <li><span style="font-size:0.7em" >Use the <font face="Consolas">ReadKeyStroke</font> function from <font face="Consolas">ConIn</font></span>  </li>
   <li><span style="font-size:0.7em" >Print back each key to console</span> </li>
-  <li><span style="font-size:0.7em" >Exit the loop when DOT “.” character followed by an &lt;<font face="Consolas">Enter</font>&gt; key  </span>  </li>
+  <li><span style="font-size:0.7em" >Exit the loop when DOT "." character followed by an &lt;<font face="Consolas">Enter</font>&gt; key  </span>  </li>
 </ol>
 </div>
 <div class="right1">
@@ -1598,7 +1598,7 @@ Same as Slide
 @title[Lab 5 : How Hints]
 <p align="right"><span class="gold" ><b>Lab 5 : How Process (Hints)</b></span></p>
 <ul style="line-height:0.8;">
-  <li><span style="font-size:0.8em" >Use the same procedure as with Lab 4 to find “<font face="Consolas">ReadKeyStroke</font>” in the work space: 	<a href="https://github.com/tianocore/edk2/blob/master/MdePkg/Library/UefiLib/Console.c">  MdePkg/Library/UefiLib/Console.c</a>  ~ ln 558</span>  </li>
+  <li><span style="font-size:0.8em" >Use the same procedure as with Lab 4 to find "<font face="Consolas">ReadKeyStroke</font>" in the work space: 	<a href="https://github.com/tianocore/edk2/blob/master/MdePkg/Library/UefiLib/Console.c">  MdePkg/Library/UefiLib/Console.c</a>  ~ ln 558</span>  </li>
   <ul style="list-style-type:none">
    <li><span style="font-size:0.6em" ><font color="white"><span style="background-color: #101010"><font face="Consolas">Status = gST-&gt;ConIn-&gt;ReadKeyStroke (gST-&gt;ConIn, Key);</font></span></font></span></li><br>
   </ul>
@@ -1609,9 +1609,9 @@ Same as Slide
   <li><span style="font-size:0.8em" >TIP: Good Idea to zero out a buffer in your function  </span>  </li>
    <ul style="list-style-type:disc">
       <li><span style="font-size:0.7em" >Use MdePkg.chm to find <font face="Consolas">ZeroMem()</font> function</span>  </li>
-      <li><span style="font-size:0.7em" >Use <font face="Consolas">ZeroMem()</font> on your variable buffer “<font face="Consolas">Key</font>” of type <font face="Consolas">EFI_INPUT_KEY</font></span>  </li><br>
+      <li><span style="font-size:0.7em" >Use <font face="Consolas">ZeroMem()</font> on your variable buffer "<font face="Consolas">Key</font>" of type <font face="Consolas">EFI_INPUT_KEY</font></span>  </li><br>
    </ul> 
-  <li><span style="font-size:0.8em" >Use Boolean flag “<font face="Consolas">ExitLoop</font>” to exit your loop once the user enters a DOT “.” character.</span>  </li>
+  <li><span style="font-size:0.8em" >Use Boolean flag "<font face="Consolas">ExitLoop</font>" to exit your loop once the user enters a DOT "." character.</span>  </li>
 </ul>
 
 Note:
@@ -2137,7 +2137,7 @@ Note:
 <br>
 
 <p style="line-height:32%" align="left" ><span style="font-size:0.42em; font-family:Consolas;" >
-<font color="cyan">@size[1.3em](“C” file)</font>
+<font color="cyan">@size[1.3em]("C" file)</font>
 <br>
 &num;include &lt;stdio.h&gt; <br>
    // . . . <br>
@@ -2284,7 +2284,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWIS
 ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY 
 OF SUCH DAMAGE.
 
-Copyright (c) 2018, Intel Corporation. All rights reserved.
+Copyright (c) 2019, Intel Corporation. All rights reserved.
 **/
 
 ```
